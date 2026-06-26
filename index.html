@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alejandro Torres</title>
-  <meta name="description" content="Strategic design, brand conceptualization, and communication systems.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav class="nav nav--hero">
+  <nav class="nav">
     <a href="index.html" class="nav__logo">Alejandro Torres</a>
     <div class="nav__right">
       <ul class="nav__links">
@@ -18,10 +17,8 @@
         <li><a href="sobre.html" data-en="About" data-es="Sobre mí">About</a></li>
         <li><a href="contacto.html" data-en="Contact" data-es="Contacto">Contact</a></li>
       </ul>
-      <div class="nav__controls">
-        <button class="nav__btn" data-toggle-lang>ES</button>
-        <button class="nav__btn" data-toggle-theme>◐</button>
-      </div>
+      <button class="nav__toggle" data-lang-toggle>ES</button>
+      <button class="nav__toggle" data-theme-toggle>◐</button>
       <button class="nav__menu-btn" aria-label="Menu">
         <span></span><span></span>
       </button>
@@ -33,53 +30,57 @@
       <img src="img/hero.jpg" alt="">
     </div>
     <div class="hero__caption">
-      <span class="hero__name" data-en="Creative Director — Mexico City" data-es="Director Creativo — Ciudad de México">Creative Director — Mexico City</span>
-      <span class="hero__scroll" data-en="Scroll" data-es="Scroll">Scroll</span>
+      <span class="hero__tag" data-en="Creative Director — Mexico City" data-es="Director Creativo — Ciudad de México">Creative Director — Mexico City</span>
+      <span class="hero__tag" data-en="Scroll" data-es="Scroll">Scroll</span>
     </div>
   </section>
 
   <section class="feed">
 
-    <a href="trabajo/proyecto-01.html" class="feed__item" data-reveal>
-      <div class="feed__img">
-        <img src="img/project-01.jpg" alt="Aetnis" loading="lazy">
-      </div>
-      <div class="feed__info">
-        <span class="feed__title">Aetnis</span>
-        <span class="feed__type" data-en="Brand Identity" data-es="Identidad de marca">Brand Identity</span>
-      </div>
-    </a>
-
-    <div class="feed__pair" data-reveal>
-      <a href="trabajo/proyecto-02.html" class="feed__pair-item">
+    <div class="feed__row feed__row--wide" data-reveal>
+      <a href="trabajo/proyecto-01.html" class="feed__link">
         <div class="feed__img">
-          <img src="img/project-02.jpg" alt="Verso" loading="lazy">
+          <img src="img/project-01.jpg" alt="Aetnis">
         </div>
-        <div class="feed__info">
-          <span class="feed__title">Verso</span>
+        <div class="feed__caption">
+          <span class="feed__name">Aetnis</span>
+          <span class="feed__type" data-en="Brand Identity" data-es="Identidad de marca">Brand Identity</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="feed__row feed__row--pair" data-reveal>
+      <a href="trabajo/proyecto-02.html" class="feed__link">
+        <div class="feed__img">
+          <img src="img/project-02.jpg" alt="Verso">
+        </div>
+        <div class="feed__caption">
+          <span class="feed__name">Verso</span>
           <span class="feed__type" data-en="Communication System" data-es="Sistema de comunicación">Communication System</span>
         </div>
       </a>
-      <a href="trabajo/proyecto-03.html" class="feed__pair-item">
+      <a href="trabajo/proyecto-03.html" class="feed__link">
         <div class="feed__img">
-          <img src="img/project-03.jpg" alt="Nómada" loading="lazy">
+          <img src="img/project-03.jpg" alt="Nómada">
         </div>
-        <div class="feed__info">
-          <span class="feed__title">Nómada</span>
+        <div class="feed__caption">
+          <span class="feed__name">Nómada</span>
           <span class="feed__type" data-en="Brand Strategy" data-es="Estrategia de marca">Brand Strategy</span>
         </div>
       </a>
     </div>
 
-    <a href="trabajo/proyecto-04.html" class="feed__item" data-reveal>
-      <div class="feed__img">
-        <img src="img/project-04.jpg" alt="Latente" loading="lazy">
-      </div>
-      <div class="feed__info">
-        <span class="feed__title">Latente</span>
-        <span class="feed__type" data-en="Creative Direction" data-es="Dirección creativa">Creative Direction</span>
-      </div>
-    </a>
+    <div class="feed__row feed__row--offset" data-reveal>
+      <a href="trabajo/proyecto-04.html" class="feed__link">
+        <div class="feed__img">
+          <img src="img/project-04.jpg" alt="Latente">
+        </div>
+        <div class="feed__caption">
+          <span class="feed__name">Latente</span>
+          <span class="feed__type" data-en="Creative Direction" data-es="Dirección creativa">Creative Direction</span>
+        </div>
+      </a>
+    </div>
 
   </section>
 
