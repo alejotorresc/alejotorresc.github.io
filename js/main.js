@@ -1,77 +1,71 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  // Menu
   const menuBtn = document.querySelector('.nav__menu-btn');
   const navLinks = document.querySelector('.nav__links');
-  const navControls = document.querySelector('.nav__controls');
 
   if (menuBtn) {
     menuBtn.addEventListener('click', () => {
       menuBtn.classList.toggle('open');
       navLinks.classList.toggle('open');
-      if (navControls) navControls.classList.toggle('open');
     });
-
-    navLinks.querySelectorAll('a').forEach(a => {
+    navLinks.querySelectorAll('a').forEach(a =>
       a.addEventListener('click', () => {
         menuBtn.classList.remove('open');
         navLinks.classList.remove('open');
-        if (navControls) navControls.classList.remove('open');
-      });
-    });
+      })
+    );
   }
 
-  // Theme toggle
-  const stored = localStorage.getItem('theme');
-  if (stored) document.documentElement.setAttribute('data-theme', stored);
+  // Theme
+  const saved = localStorage.getItem('theme');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
 
-  document.querySelectorAll('[data-toggle-theme]').forEach(btn => {
+  document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
     btn.addEventListener('click', () => {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      if (next === 'light') {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
         document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
       } else {
         document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
       }
-      localStorage.setItem('theme', next);
     });
   });
 
-  // Language toggle
-  const savedLang = localStorage.getItem('lang') || 'en';
-  applyLang(savedLang);
+  // Language
+  const lang = localStorage.getItem('lang') || 'en';
+  applyLang(lang);
 
-  document.querySelectorAll('[data-toggle-lang]').forEach(btn => {
+  document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
     btn.addEventListener('click', () => {
-      const current = localStorage.getItem('lang') || 'en';
-      const next = current === 'en' ? 'es' : 'en';
+      const next = (localStorage.getItem('lang') || 'en') === 'en' ? 'es' : 'en';
       localStorage.setItem('lang', next);
       applyLang(next);
     });
   });
 
-  function applyLang(lang) {
-    document.documentElement.lang = lang;
+  function applyLang(l) {
+    document.documentElement.lang = l;
     document.querySelectorAll('[data-en]').forEach(el => {
-      el.textContent = lang === 'en' ? el.dataset.en : el.dataset.es;
+      el.textContent = l === 'en' ? el.dataset.en : (el.dataset.es || el.dataset.en);
     });
-    document.querySelectorAll('[data-toggle-lang]').forEach(btn => {
-      btn.textContent = lang === 'en' ? 'ES' : 'EN';
+    document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
+      btn.textContent = l === 'en' ? 'ES' : 'EN';
     });
   }
 
   // Reveal
-  const reveals = document.querySelectorAll('[data-reveal]');
+  const els = document.querySelectorAll('[data-reveal]');
   if ('IntersectionObserver' in window) {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('revealed');
-          obs.unobserve(e.target);
-        }
+        if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }
       });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => obs.observe(el));
+    }, { threshold: 0.15 });
+    els.forEach(el => obs.observe(el));
   } else {
-    reveals.forEach(el => el.classList.add('revealed'));
+    els.forEach(el => el.classList.add('revealed'));
   }
 });
