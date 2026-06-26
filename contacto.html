@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto — Alejandro Torres</title>
-  <meta name="description" content="Conversemos sobre tu próximo proyecto.">
+  <title>Contact — Alejandro Torres</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav class="nav nav--solid">
+  <nav class="nav">
     <a href="index.html" class="nav__logo">Alejandro Torres</a>
-    <button class="nav__menu-btn" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav__links">
-      <li><a href="trabajo.html">Trabajo</a></li>
-      <li><a href="pensamiento.html">Pensamiento</a></li>
-      <li><a href="sobre.html">Sobre mí</a></li>
-      <li><a href="contacto.html" class="active">Contacto</a></li>
-    </ul>
+    <div class="nav__right">
+      <ul class="nav__links">
+        <li><a href="trabajo.html" data-en="Work" data-es="Trabajo">Work</a></li>
+        <li><a href="pensamiento.html" data-en="Thinking" data-es="Pensamiento">Thinking</a></li>
+        <li><a href="sobre.html" data-en="About" data-es="Sobre mí">About</a></li>
+        <li><a href="contacto.html" class="active" data-en="Contact" data-es="Contacto">Contact</a></li>
+      </ul>
+      <div class="nav__controls">
+        <button class="nav__btn" data-toggle-lang>ES</button>
+        <button class="nav__btn" data-toggle-theme>◐</button>
+      </div>
+      <button class="nav__menu-btn" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <div class="contact">
-    <div class="contact__inner" data-reveal>
-      <h1 class="contact__heading">Conversemos</h1>
-      <p class="contact__text">Si tienes un proyecto que necesita pensamiento estratégico antes de ejecución, o si simplemente quieres conversar sobre diseño y marca, escríbeme.</p>
-      <div class="contact__links">
-        <a href="mailto:hola@alejandrotorres.com" class="contact__link">hola@alejandrotorres.com</a>
-        <a href="https://linkedin.com/in/" class="contact__link" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://instagram.com/" class="contact__link" target="_blank" rel="noopener">Instagram</a>
-      </div>
+  <section class="contact-page" data-reveal>
+    <h1 class="contact-page__heading" data-en="Let's talk" data-es="Conversemos">Let's talk</h1>
+    <p class="contact-page__sub" data-en="If you have a project that needs strategic thinking before execution, or if you simply want to talk about design and branding, reach out." data-es="Si tienes un proyecto que necesita pensamiento estratégico antes de ejecución, o si simplemente quieres conversar sobre diseño y marca, escríbeme.">If you have a project that needs strategic thinking before execution, or if you simply want to talk about design and branding, reach out.</p>
+    <div class="contact-page__links">
+      <a href="mailto:hola@alejandrotorres.com" class="contact-page__link">Email</a>
+      <a href="https://linkedin.com/in/" class="contact-page__link" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://instagram.com/" class="contact-page__link" target="_blank" rel="noopener">Instagram</a>
     </div>
-  </div>
+  </section>
 
   <footer class="footer">
-    <span class="footer__text">&copy; 2026 Alejandro Torres</span>
-    <span class="footer__text">Ciudad de México</span>
+    <span class="footer__text">&copy; 2026</span>
+    <span class="footer__text">Alejandro Torres</span>
   </footer>
 
   <script src="js/main.js"></script>

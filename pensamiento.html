@@ -1,61 +1,66 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pensamiento — Alejandro Torres</title>
-  <meta name="description" content="Reflexiones sobre diseño, proceso y conceptualización de marca.">
+  <title>Thinking — Alejandro Torres</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav class="nav nav--solid">
+  <nav class="nav">
     <a href="index.html" class="nav__logo">Alejandro Torres</a>
-    <button class="nav__menu-btn" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav__links">
-      <li><a href="trabajo.html">Trabajo</a></li>
-      <li><a href="pensamiento.html" class="active">Pensamiento</a></li>
-      <li><a href="sobre.html">Sobre mí</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+    <div class="nav__right">
+      <ul class="nav__links">
+        <li><a href="trabajo.html" data-en="Work" data-es="Trabajo">Work</a></li>
+        <li><a href="pensamiento.html" class="active" data-en="Thinking" data-es="Pensamiento">Thinking</a></li>
+        <li><a href="sobre.html" data-en="About" data-es="Sobre mí">About</a></li>
+        <li><a href="contacto.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      </ul>
+      <div class="nav__controls">
+        <button class="nav__btn" data-toggle-lang>ES</button>
+        <button class="nav__btn" data-toggle-theme>◐</button>
+      </div>
+      <button class="nav__menu-btn" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <header class="page-header" data-reveal>
-    <h1 class="page-header__title">Pensamiento</h1>
-  </header>
+  <div class="page-top">
+    <span class="page-top__label" data-en="Thinking" data-es="Pensamiento">Thinking</span>
+  </div>
 
-  <ul class="articles-list" data-reveal>
-    <li class="article-item">
+  <ul class="articles" data-reveal>
+    <li>
       <a href="#">
-        <span class="article-item__title">Lo que una marca dice cuando no está hablando</span>
-        <span class="article-item__date">Junio 2026</span>
+        <span class="articles__title" data-en="What a brand says when it's not speaking" data-es="Lo que una marca dice cuando no está hablando">What a brand says when it's not speaking</span>
+        <span class="articles__date">06.2026</span>
       </a>
     </li>
-    <li class="article-item">
+    <li>
       <a href="#">
-        <span class="article-item__title">Estrategia no es decoración con argumentos</span>
-        <span class="article-item__date">Mayo 2026</span>
+        <span class="articles__title" data-en="Strategy is not decoration with arguments" data-es="Estrategia no es decoración con argumentos">Strategy is not decoration with arguments</span>
+        <span class="articles__date">05.2026</span>
       </a>
     </li>
-    <li class="article-item">
+    <li>
       <a href="#">
-        <span class="article-item__title">El problema de diseñar sin preguntar</span>
-        <span class="article-item__date">Abril 2026</span>
+        <span class="articles__title" data-en="The problem with designing without asking" data-es="El problema de diseñar sin preguntar">The problem with designing without asking</span>
+        <span class="articles__date">04.2026</span>
       </a>
     </li>
-    <li class="article-item">
+    <li>
       <a href="#">
-        <span class="article-item__title">Construir un universo, no una imagen</span>
-        <span class="article-item__date">Marzo 2026</span>
+        <span class="articles__title" data-en="Building a universe, not an image" data-es="Construir un universo, no una imagen">Building a universe, not an image</span>
+        <span class="articles__date">03.2026</span>
       </a>
     </li>
   </ul>
 
   <footer class="footer">
-    <span class="footer__text">&copy; 2026 Alejandro Torres</span>
-    <span class="footer__text">Ciudad de México</span>
+    <span class="footer__text">&copy; 2026</span>
+    <span class="footer__text">Alejandro Torres</span>
   </footer>
 
   <script src="js/main.js"></script>

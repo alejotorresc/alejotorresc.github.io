@@ -1,76 +1,93 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trabajo — Alejandro Torres</title>
-  <meta name="description" content="Proyectos seleccionados de diseño estratégico y conceptualización de marca.">
+  <title>Work — Alejandro Torres</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav class="nav nav--solid">
+  <nav class="nav">
     <a href="index.html" class="nav__logo">Alejandro Torres</a>
-    <button class="nav__menu-btn" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav__links">
-      <li><a href="trabajo.html" class="active">Trabajo</a></li>
-      <li><a href="pensamiento.html">Pensamiento</a></li>
-      <li><a href="sobre.html">Sobre mí</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+    <div class="nav__right">
+      <ul class="nav__links">
+        <li><a href="trabajo.html" class="active" data-en="Work" data-es="Trabajo">Work</a></li>
+        <li><a href="pensamiento.html" data-en="Thinking" data-es="Pensamiento">Thinking</a></li>
+        <li><a href="sobre.html" data-en="About" data-es="Sobre mí">About</a></li>
+        <li><a href="contacto.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      </ul>
+      <div class="nav__controls">
+        <button class="nav__btn" data-toggle-lang>ES</button>
+        <button class="nav__btn" data-toggle-theme>◐</button>
+      </div>
+      <button class="nav__menu-btn" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <header class="page-header" data-reveal>
-    <h1 class="page-header__title">Trabajo seleccionado</h1>
-  </header>
+  <div class="page-top">
+    <span class="page-top__label" data-en="Selected Work" data-es="Trabajo seleccionado">Selected Work</span>
+  </div>
 
-  <div class="work-grid">
-    <a href="trabajo/proyecto-01.html" class="work-grid__item" data-reveal>
-      <div class="work-grid__image">
+  <div class="work-list">
+
+    <a href="trabajo/proyecto-01.html" class="work-list__item" data-reveal>
+      <div class="work-list__text">
+        <span class="work-list__name">Aetnis</span>
+        <span class="work-list__category" data-en="Brand Identity" data-es="Identidad de marca">Brand Identity</span>
+      </div>
+      <div class="work-list__img">
         <img src="img/project-01.jpg" alt="Aetnis" loading="lazy">
       </div>
-      <h2 class="work-grid__title">Aetnis</h2>
-      <p class="work-grid__desc">Identidad de marca</p>
     </a>
 
-    <a href="trabajo/proyecto-02.html" class="work-grid__item" data-reveal>
-      <div class="work-grid__image">
+    <a href="trabajo/proyecto-02.html" class="work-list__item" data-reveal>
+      <div class="work-list__text">
+        <span class="work-list__name">Verso</span>
+        <span class="work-list__category" data-en="Communication System" data-es="Sistema de comunicación">Communication System</span>
+      </div>
+      <div class="work-list__img">
         <img src="img/project-02.jpg" alt="Verso" loading="lazy">
       </div>
-      <h2 class="work-grid__title">Verso</h2>
-      <p class="work-grid__desc">Sistema de comunicación</p>
     </a>
 
-    <a href="trabajo/proyecto-03.html" class="work-grid__item" data-reveal>
-      <div class="work-grid__image">
+    <a href="trabajo/proyecto-03.html" class="work-list__item" data-reveal>
+      <div class="work-list__text">
+        <span class="work-list__name">Nómada</span>
+        <span class="work-list__category" data-en="Brand Strategy" data-es="Estrategia de marca">Brand Strategy</span>
+      </div>
+      <div class="work-list__img">
         <img src="img/project-03.jpg" alt="Nómada" loading="lazy">
       </div>
-      <h2 class="work-grid__title">Nómada</h2>
-      <p class="work-grid__desc">Estrategia de marca</p>
     </a>
 
-    <a href="trabajo/proyecto-04.html" class="work-grid__item" data-reveal>
-      <div class="work-grid__image">
+    <a href="trabajo/proyecto-04.html" class="work-list__item" data-reveal>
+      <div class="work-list__text">
+        <span class="work-list__name">Latente</span>
+        <span class="work-list__category" data-en="Creative Direction" data-es="Dirección creativa">Creative Direction</span>
+      </div>
+      <div class="work-list__img">
         <img src="img/project-04.jpg" alt="Latente" loading="lazy">
       </div>
-      <h2 class="work-grid__title">Latente</h2>
-      <p class="work-grid__desc">Dirección creativa</p>
     </a>
 
-    <a href="trabajo/proyecto-05.html" class="work-grid__item" data-reveal>
-      <div class="work-grid__image">
+    <a href="trabajo/proyecto-05.html" class="work-list__item" data-reveal>
+      <div class="work-list__text">
+        <span class="work-list__name">Origen</span>
+        <span class="work-list__category" data-en="Brand Conceptualization" data-es="Conceptualización de marca">Brand Conceptualization</span>
+      </div>
+      <div class="work-list__img">
         <img src="img/project-05.jpg" alt="Origen" loading="lazy">
       </div>
-      <h2 class="work-grid__title">Origen</h2>
-      <p class="work-grid__desc">Conceptualización de marca</p>
     </a>
+
   </div>
 
   <footer class="footer">
-    <span class="footer__text">&copy; 2026 Alejandro Torres</span>
-    <span class="footer__text">Ciudad de México</span>
+    <span class="footer__text">&copy; 2026</span>
+    <span class="footer__text">Alejandro Torres</span>
   </footer>
 
   <script src="js/main.js"></script>
