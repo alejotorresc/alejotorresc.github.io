@@ -1,65 +1,68 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre mí — Alejandro Torres</title>
-  <meta name="description" content="Alejandro Torres. Director creativo enfocado en diseño estratégico.">
+  <title>About — Alejandro Torres</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav class="nav nav--solid">
+  <nav class="nav">
     <a href="index.html" class="nav__logo">Alejandro Torres</a>
-    <button class="nav__menu-btn" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav__links">
-      <li><a href="trabajo.html">Trabajo</a></li>
-      <li><a href="pensamiento.html">Pensamiento</a></li>
-      <li><a href="sobre.html" class="active">Sobre mí</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+    <div class="nav__right">
+      <ul class="nav__links">
+        <li><a href="trabajo.html" data-en="Work" data-es="Trabajo">Work</a></li>
+        <li><a href="pensamiento.html" data-en="Thinking" data-es="Pensamiento">Thinking</a></li>
+        <li><a href="sobre.html" class="active" data-en="About" data-es="Sobre mí">About</a></li>
+        <li><a href="contacto.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      </ul>
+      <div class="nav__controls">
+        <button class="nav__btn" data-toggle-lang>ES</button>
+        <button class="nav__btn" data-toggle-theme>◐</button>
+      </div>
+      <button class="nav__menu-btn" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <div class="about">
-    <div class="about__layout">
-      <div class="about__image" data-reveal>
-        <img src="img/about.jpg" alt="Alejandro Torres">
+  <section class="about" data-reveal>
+    <div class="about__photo">
+      <img src="img/about.jpg" alt="Alejandro Torres">
+    </div>
+    <div class="about__body">
+      <p class="about__intro" data-en="About" data-es="Sobre mí">About</p>
+      <div class="about__text">
+        <p data-en="I'm a creative director based in Mexico City. My work sits at the intersection of strategy and design — building brands that think before they speak and systems that hold together long after the first impression." data-es="Soy director creativo en la Ciudad de México. Mi trabajo se ubica en la intersección entre estrategia y diseño — construyendo marcas que piensan antes de hablar y sistemas que se sostienen mucho después de la primera impresión.">I'm a creative director based in Mexico City. My work sits at the intersection of strategy and design — building brands that think before they speak and systems that hold together long after the first impression.</p>
+        <p data-en="I believe every visual decision should be the consequence of a strategic one. I don't start with aesthetics — I start with the question a brand needs to answer. From there, every element has a reason." data-es="Creo que cada decisión visual debe ser consecuencia de una decisión estratégica. No empiezo por la estética — empiezo por la pregunta que la marca necesita responder. A partir de ahí, cada elemento tiene una razón.">I believe every visual decision should be the consequence of a strategic one. I don't start with aesthetics — I start with the question a brand needs to answer. From there, every element has a reason.</p>
+        <p data-en="I've worked with emerging brands and established companies across Latin America, shaping identities, communication systems, and creative strategies that aim to mean something beyond the surface." data-es="He trabajado con marcas emergentes y empresas consolidadas en toda Latinoamérica, dando forma a identidades, sistemas de comunicación y estrategias creativas que buscan significar algo más allá de la superficie.">I've worked with emerging brands and established companies across Latin America, shaping identities, communication systems, and creative strategies that aim to mean something beyond the surface.</p>
       </div>
-      <div class="about__content" data-reveal>
-        <h1 class="about__name">Alejandro Torres</h1>
-        <div class="about__bio">
-          <p>Trabajo en el espacio entre lo que una marca quiere decir y lo que el mundo necesita escuchar. No diseño logotipos; construyo los argumentos visuales y verbales que sostienen una identidad a lo largo del tiempo.</p>
-          <p>Mi proceso empieza siempre por entender antes de proponer. Las decisiones de diseño que funcionan no nacen de la inspiración, sino de la claridad sobre el problema. Por eso mi trabajo se parece más a editar que a decorar: quitar lo que sobra hasta que lo esencial sea evidente.</p>
-          <p>Creo que el diseño estratégico no es una disciplina separada del diseño visual. Es la misma cosa, hecha con intención.</p>
+      <div class="about__cv">
+        <p class="about__cv-title" data-en="Selected Experience" data-es="Experiencia seleccionada">Selected Experience</p>
+        <div class="cv-row">
+          <span class="cv-row__year">2023–</span>
+          <span class="cv-row__text" data-en="Independent — Creative Direction & Brand Strategy" data-es="Independiente — Dirección Creativa y Estrategia de Marca">Independent — Creative Direction & Brand Strategy</span>
         </div>
-        <div class="about__timeline">
-          <p class="about__timeline-title">Trayectoria</p>
-          <div class="timeline-item">
-            <span class="timeline-item__year">2024–</span>
-            <span class="timeline-item__text">Director creativo independiente, Ciudad de México</span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-item__year">2021</span>
-            <span class="timeline-item__text"><!-- PLACEHOLDER --></span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-item__year">2019</span>
-            <span class="timeline-item__text"><!-- PLACEHOLDER --></span>
-          </div>
-          <div class="timeline-item">
-            <span class="timeline-item__year">2017</span>
-            <span class="timeline-item__text"><!-- PLACEHOLDER --></span>
-          </div>
+        <div class="cv-row">
+          <span class="cv-row__year">2021</span>
+          <span class="cv-row__text" data-en="Studio Nómada — Senior Designer" data-es="Studio Nómada — Diseñador Senior">Studio Nómada — Senior Designer</span>
+        </div>
+        <div class="cv-row">
+          <span class="cv-row__year">2019</span>
+          <span class="cv-row__text" data-en="Latente Agency — Brand Designer" data-es="Latente Agency — Diseñador de Marca">Latente Agency — Brand Designer</span>
+        </div>
+        <div class="cv-row">
+          <span class="cv-row__year">2017</span>
+          <span class="cv-row__text" data-en="UNAM — B.A. in Graphic Design" data-es="UNAM — Licenciatura en Diseño Gráfico">UNAM — B.A. in Graphic Design</span>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <footer class="footer">
-    <span class="footer__text">&copy; 2026 Alejandro Torres</span>
-    <span class="footer__text">Ciudad de México</span>
+    <span class="footer__text">&copy; 2026</span>
+    <span class="footer__text">Alejandro Torres</span>
   </footer>
 
   <script src="js/main.js"></script>

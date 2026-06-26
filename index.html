@@ -1,84 +1,91 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alejandro Torres — Director Creativo</title>
-  <meta name="description" content="Diseño estratégico, conceptualización de marca y construcción de universos de comunicación.">
+  <title>Alejandro Torres</title>
+  <meta name="description" content="Strategic design, brand conceptualization, and communication systems.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav class="nav nav--invert">
+  <nav class="nav nav--hero">
     <a href="index.html" class="nav__logo">Alejandro Torres</a>
-    <button class="nav__menu-btn" aria-label="Menú">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav__links">
-      <li><a href="trabajo.html">Trabajo</a></li>
-      <li><a href="pensamiento.html">Pensamiento</a></li>
-      <li><a href="sobre.html">Sobre mí</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
+    <div class="nav__right">
+      <ul class="nav__links">
+        <li><a href="trabajo.html" data-en="Work" data-es="Trabajo">Work</a></li>
+        <li><a href="pensamiento.html" data-en="Thinking" data-es="Pensamiento">Thinking</a></li>
+        <li><a href="sobre.html" data-en="About" data-es="Sobre mí">About</a></li>
+        <li><a href="contacto.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      </ul>
+      <div class="nav__controls">
+        <button class="nav__btn" data-toggle-lang>ES</button>
+        <button class="nav__btn" data-toggle-theme>◐</button>
+      </div>
+      <button class="nav__menu-btn" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
   </nav>
 
-  <section class="home-hero">
-    <div class="home-hero__image">
-      <img src="img/hero.jpg" alt="Proyecto destacado de Alejandro Torres">
+  <section class="hero">
+    <div class="hero__img">
+      <img src="img/hero.jpg" alt="">
     </div>
-    <div class="home-hero__content" data-reveal>
-      <h1 class="home-hero__name">Alejandro Torres</h1>
-      <p class="home-hero__role">Director Creativo</p>
+    <div class="hero__caption">
+      <span class="hero__name" data-en="Creative Director — Mexico City" data-es="Director Creativo — Ciudad de México">Creative Director — Mexico City</span>
+      <span class="hero__scroll" data-en="Scroll" data-es="Scroll">Scroll</span>
     </div>
   </section>
 
-  <section class="home-feed">
+  <section class="feed">
 
-    <a href="trabajo/proyecto-01.html" class="home-feed__item" data-reveal>
-      <div class="home-feed__image">
-        <img src="img/project-01.jpg" alt="Aetnis — Identidad de marca" loading="lazy">
+    <a href="trabajo/proyecto-01.html" class="feed__item" data-reveal>
+      <div class="feed__img">
+        <img src="img/project-01.jpg" alt="Aetnis" loading="lazy">
       </div>
-      <div class="home-feed__meta">
-        <h2 class="home-feed__title">Aetnis</h2>
-        <span class="home-feed__type">Identidad de marca</span>
+      <div class="feed__info">
+        <span class="feed__title">Aetnis</span>
+        <span class="feed__type" data-en="Brand Identity" data-es="Identidad de marca">Brand Identity</span>
       </div>
     </a>
 
-    <a href="trabajo/proyecto-02.html" class="home-feed__item" data-reveal>
-      <div class="home-feed__image">
-        <img src="img/project-02.jpg" alt="Verso — Sistema de comunicación" loading="lazy">
-      </div>
-      <div class="home-feed__meta">
-        <h2 class="home-feed__title">Verso</h2>
-        <span class="home-feed__type">Sistema de comunicación</span>
-      </div>
-    </a>
+    <div class="feed__pair" data-reveal>
+      <a href="trabajo/proyecto-02.html" class="feed__pair-item">
+        <div class="feed__img">
+          <img src="img/project-02.jpg" alt="Verso" loading="lazy">
+        </div>
+        <div class="feed__info">
+          <span class="feed__title">Verso</span>
+          <span class="feed__type" data-en="Communication System" data-es="Sistema de comunicación">Communication System</span>
+        </div>
+      </a>
+      <a href="trabajo/proyecto-03.html" class="feed__pair-item">
+        <div class="feed__img">
+          <img src="img/project-03.jpg" alt="Nómada" loading="lazy">
+        </div>
+        <div class="feed__info">
+          <span class="feed__title">Nómada</span>
+          <span class="feed__type" data-en="Brand Strategy" data-es="Estrategia de marca">Brand Strategy</span>
+        </div>
+      </a>
+    </div>
 
-    <a href="trabajo/proyecto-03.html" class="home-feed__item" data-reveal>
-      <div class="home-feed__image">
-        <img src="img/project-03.jpg" alt="Nómada — Estrategia de marca" loading="lazy">
+    <a href="trabajo/proyecto-04.html" class="feed__item" data-reveal>
+      <div class="feed__img">
+        <img src="img/project-04.jpg" alt="Latente" loading="lazy">
       </div>
-      <div class="home-feed__meta">
-        <h2 class="home-feed__title">Nómada</h2>
-        <span class="home-feed__type">Estrategia de marca</span>
-      </div>
-    </a>
-
-    <a href="trabajo/proyecto-04.html" class="home-feed__item" data-reveal>
-      <div class="home-feed__image">
-        <img src="img/project-04.jpg" alt="Latente — Dirección creativa" loading="lazy">
-      </div>
-      <div class="home-feed__meta">
-        <h2 class="home-feed__title">Latente</h2>
-        <span class="home-feed__type">Dirección creativa</span>
+      <div class="feed__info">
+        <span class="feed__title">Latente</span>
+        <span class="feed__type" data-en="Creative Direction" data-es="Dirección creativa">Creative Direction</span>
       </div>
     </a>
 
   </section>
 
   <footer class="footer">
-    <span class="footer__text">&copy; 2026 Alejandro Torres</span>
-    <span class="footer__text">Ciudad de México</span>
+    <span class="footer__text">&copy; 2026</span>
+    <span class="footer__text">Alejandro Torres</span>
   </footer>
 
   <script src="js/main.js"></script>
