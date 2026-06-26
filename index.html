@@ -30,21 +30,22 @@
       <img src="img/hero.jpg" alt="">
     </div>
     <div class="hero__caption">
-      <span class="hero__tag" data-en="Creative Director — Mexico City" data-es="Director Creativo — Ciudad de México">Creative Director — Mexico City</span>
-      <span class="hero__tag" data-en="Scroll" data-es="Scroll">Scroll</span>
+      <span class="hero__tag" data-en="Creative Director" data-es="Director Creativo">Creative Director</span>
+      <span class="hero__tag" data-en="Mexico City" data-es="Ciudad de México">Mexico City</span>
     </div>
   </section>
 
   <section class="feed">
 
-    <div class="feed__row feed__row--wide" data-reveal>
+    <div class="feed__row feed__row--full" data-reveal>
       <a href="trabajo/proyecto-01.html" class="feed__link">
         <div class="feed__img">
           <img src="img/project-01.jpg" alt="Aetnis">
         </div>
-        <div class="feed__caption">
+        <div class="feed__caption" style="padding: 0 var(--side);">
           <span class="feed__name">Aetnis</span>
-          <span class="feed__type" data-en="Brand Identity" data-es="Identidad de marca">Brand Identity</span>
+          <span class="feed__desc" data-en="Brand Identity" data-es="Identidad de marca">Brand Identity</span>
+          <span class="feed__year">2025</span>
         </div>
       </a>
     </div>
@@ -56,7 +57,8 @@
         </div>
         <div class="feed__caption">
           <span class="feed__name">Verso</span>
-          <span class="feed__type" data-en="Communication System" data-es="Sistema de comunicación">Communication System</span>
+          <span class="feed__desc" data-en="Communication System" data-es="Sistema de comunicación">Communication System</span>
+          <span class="feed__year">2025</span>
         </div>
       </a>
       <a href="trabajo/proyecto-03.html" class="feed__link">
@@ -65,7 +67,8 @@
         </div>
         <div class="feed__caption">
           <span class="feed__name">Nómada</span>
-          <span class="feed__type" data-en="Brand Strategy" data-es="Estrategia de marca">Brand Strategy</span>
+          <span class="feed__desc" data-en="Brand Strategy" data-es="Estrategia de marca">Brand Strategy</span>
+          <span class="feed__year">2024</span>
         </div>
       </a>
     </div>
@@ -77,7 +80,8 @@
         </div>
         <div class="feed__caption">
           <span class="feed__name">Latente</span>
-          <span class="feed__type" data-en="Creative Direction" data-es="Dirección creativa">Creative Direction</span>
+          <span class="feed__desc" data-en="Creative Direction" data-es="Dirección creativa">Creative Direction</span>
+          <span class="feed__year">2024</span>
         </div>
       </a>
     </div>
@@ -85,8 +89,19 @@
   </section>
 
   <footer class="footer">
-    <span class="footer__text">&copy; 2026</span>
-    <span class="footer__text">Alejandro Torres</span>
+    <div class="footer__col">
+      <p class="footer__heading">Alejandro Torres</p>
+      <p class="footer__text" data-en="Creative Director" data-es="Director Creativo">Creative Director</p>
+      <p class="footer__text" data-en="Mexico City" data-es="Ciudad de México">Mexico City</p>
+    </div>
+    <div class="footer__col footer__col--center">
+      <a href="mailto:hola@alejandrotorres.com" class="footer__link">hola@alejandrotorres.com</a>
+      <a href="https://instagram.com/" class="footer__link" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://linkedin.com/in/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="footer__col footer__col--right">
+      <p class="footer__copy">&copy; 2026</p>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
