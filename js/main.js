@@ -27,4 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     lastScroll = current;
   }, { passive: true });
+
+  const reveals = document.querySelectorAll('[data-reveal]');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(el => observer.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('revealed'));
+  }
 });
