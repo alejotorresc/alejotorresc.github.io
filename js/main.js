@@ -1,25 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Menu
   const menuBtn = document.querySelector('.nav__menu-btn');
-  const navLinks = document.querySelector('.nav__links');
+  const overlay = document.querySelector('.nav__overlay');
 
-  if (menuBtn) {
+  if (menuBtn && overlay) {
     menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('open');
-      navLinks.classList.toggle('open');
+      const isOpen = menuBtn.classList.toggle('open');
+      overlay.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
-    navLinks.querySelectorAll('a').forEach(a =>
+
+    overlay.querySelectorAll('a').forEach(a =>
       a.addEventListener('click', () => {
         menuBtn.classList.remove('open');
-        navLinks.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
       })
     );
   }
 
   // Theme
   const saved = localStorage.getItem('theme');
-  if (saved) document.documentElement.setAttribute('data-theme', saved);
+  if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
 
   document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -61,9 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if ('IntersectionObserver' in window) {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); }
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          obs.unobserve(e.target);
+        }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     els.forEach(el => obs.observe(el));
   } else {
     els.forEach(el => el.classList.add('revealed'));
