@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nombre del proyecto — Alejandro Torres</title>
+  <title>Aetnis — Alejandro Torres</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-  <nav class="nav">
+  <nav class="nav nav--solid">
     <a href="../index.html" class="nav__logo">Alejandro Torres</a>
     <button class="nav__menu-btn" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -21,79 +21,65 @@
     </ul>
   </nav>
 
-  <div class="project-hero">
-    <!-- PLACEHOLDER: Imagen hero del proyecto a sangre completa -->
-    <div style="width:100%;height:100%;background:#d8d5ce;"></div>
+  <div class="project-cover">
+    <img src="../img/project-detail-01.jpg" alt="Aetnis — proyecto completo">
   </div>
 
-  <main class="container">
-    <header class="project-header" data-reveal>
-      <h1 class="project-header__title heading-lg">Nombre del proyecto</h1>
-      <div class="project-meta">
-        <div class="project-meta__item">
-          <span class="heading-sm">Cliente</span>
-          <span class="caption">Nombre del cliente</span>
-        </div>
-        <div class="project-meta__item">
-          <span class="heading-sm">Año</span>
-          <span class="caption">2025</span>
-        </div>
-        <div class="project-meta__item">
-          <span class="heading-sm">Alcance</span>
-          <span class="caption">Estrategia de marca, identidad visual, sistema de comunicación</span>
-        </div>
+  <div class="project-intro" data-reveal>
+    <h1 class="project-intro__title">Aetnis</h1>
+    <div class="project-intro__meta">
+      <div class="project-intro__meta-item">
+        <span class="project-intro__label">Cliente</span>
+        <span class="project-intro__value">Aetnis</span>
       </div>
-    </header>
-
-    <section class="project-section" data-reveal>
-      <p class="heading-sm project-section__label">Contexto</p>
-      <div class="body-text">
-        <!-- PLACEHOLDER: Insertar copy de contexto del proyecto -->
-        <p>Descripción del contexto y la situación inicial del proyecto. Qué necesitaba el cliente, qué problema existía, qué oportunidad se identificó.</p>
+      <div class="project-intro__meta-item">
+        <span class="project-intro__label">Año</span>
+        <span class="project-intro__value">2025</span>
       </div>
-    </section>
-
-    <div class="project-image-full">
-      <!-- PLACEHOLDER: Imagen a sangre completa -->
-      <div style="width:100%;aspect-ratio:21/9;background:#ccc9c0;"></div>
-    </div>
-
-    <section class="project-section" data-reveal>
-      <p class="heading-sm project-section__label">Proceso</p>
-      <div class="body-text">
-        <!-- PLACEHOLDER: Insertar copy del proceso -->
-        <p>Descripción del enfoque y las decisiones clave tomadas durante el proceso. No la metodología genérica, sino lo que hizo que este proyecto fuera diferente.</p>
+      <div class="project-intro__meta-item">
+        <span class="project-intro__label">Alcance</span>
+        <span class="project-intro__value">Estrategia, identidad visual, sistema de comunicación</span>
       </div>
-    </section>
-
-    <div class="project-image-pair">
-      <!-- PLACEHOLDER: Par de imágenes del proceso/resultado -->
-      <div style="width:100%;aspect-ratio:4/3;background:#d2cfc8;"></div>
-      <div style="width:100%;aspect-ratio:4/3;background:#c5c2ba;"></div>
     </div>
+  </div>
 
-    <section class="project-section" data-reveal>
-      <p class="heading-sm project-section__label">Resultado</p>
-      <div class="body-text">
-        <!-- PLACEHOLDER: Insertar copy del resultado -->
-        <p>Lo que se logró. No métricas vacías, sino el cambio real que el proyecto generó en la percepción, la comunicación o la posición del cliente.</p>
-      </div>
-    </section>
-
-    <div class="project-image-full">
-      <!-- PLACEHOLDER: Imagen final del resultado -->
-      <div style="width:100%;aspect-ratio:16/9;background:#dbd8d1;"></div>
+  <div class="project-body" data-reveal>
+    <div class="project-body__text">
+      <p>Aetnis necesitaba construir una identidad que comunicara su posición en el mercado sin recurrir a los códigos visuales de su categoría. El reto no era diseñar un logotipo atractivo, sino definir un lenguaje que pudiera sostener la conversación de la marca durante años.</p>
+      <p>El proceso comenzó con una fase de inmersión donde se identificaron las tensiones culturales que la marca podía habitar. A partir de ahí, se construyó un territorio conceptual que informó cada decisión visual: desde la tipografía hasta el tono fotográfico, pasando por la estructura de comunicación en cada punto de contacto.</p>
     </div>
+  </div>
 
-    <div class="project-next">
-      <p class="heading-sm project-next__label">Siguiente proyecto</p>
-      <a href="proyecto-02.html" class="project-next__title">Nombre del siguiente proyecto</a>
+  <div class="project-images--full">
+    <img src="../img/project-detail-01.jpg" alt="Aetnis — sistema visual" loading="lazy">
+  </div>
+
+  <div class="project-body" data-reveal>
+    <div class="project-body__text">
+      <p>El resultado es un sistema de identidad que no depende de un elemento gráfico aislado, sino de la coherencia entre decisiones. Cada pieza de comunicación refuerza la percepción de una marca que piensa antes de hablar.</p>
     </div>
-  </main>
+  </div>
+
+  <div class="project-images--pair">
+    <img src="../img/project-detail-02.jpg" alt="Aetnis — detalle" loading="lazy">
+    <img src="../img/project-detail-03.jpg" alt="Aetnis — aplicación" loading="lazy">
+  </div>
+
+  <div class="project-images--full">
+    <img src="../img/project-detail-04.jpg" alt="Aetnis — resultado final" loading="lazy">
+  </div>
+
+  <a href="proyecto-02.html" class="project-next">
+    <div>
+      <p class="project-next__label">Siguiente proyecto</p>
+      <span class="project-next__title">Verso</span>
+    </div>
+    <span class="project-next__arrow">→</span>
+  </a>
 
   <footer class="footer">
-    <span class="footer__copy">&copy; 2026 Alejandro Torres</span>
-    <span class="footer__copy">Ciudad de México</span>
+    <span class="footer__text">&copy; 2026 Alejandro Torres</span>
+    <span class="footer__text">Ciudad de México</span>
   </footer>
 
   <script src="../js/main.js"></script>

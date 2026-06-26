@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trabajo — Alejandro Torres</title>
-  <meta name="description" content="Proyectos seleccionados de Alejandro Torres.">
+  <meta name="description" content="Proyectos seleccionados de diseño estratégico y conceptualización de marca.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav class="nav">
+  <nav class="nav nav--solid">
     <a href="index.html" class="nav__logo">Alejandro Torres</a>
     <button class="nav__menu-btn" aria-label="Menú">
       <span></span><span></span><span></span>
@@ -22,76 +22,55 @@
     </ul>
   </nav>
 
-  <main class="page-content">
-    <div class="container">
-      <header style="margin-bottom:var(--space-xl)" data-reveal>
-        <h1 class="heading-xl">Trabajo</h1>
-      </header>
+  <header class="page-header" data-reveal>
+    <h1 class="page-header__title">Trabajo seleccionado</h1>
+  </header>
 
-      <div class="projects-grid">
-
-        <a href="trabajo/proyecto-01.html" class="project-card" data-reveal>
-          <div class="project-card__image">
-            <!-- PLACEHOLDER: Imagen proyecto 01 — formato panorámico -->
-            <div style="width:100%;height:100%;background:#d8d5ce;"></div>
-          </div>
-          <div class="project-card__info">
-            <h2 class="project-card__title">Nombre del proyecto</h2>
-            <p class="project-card__desc">Breve descripción del problema resuelto</p>
-          </div>
-        </a>
-
-        <a href="trabajo/proyecto-02.html" class="project-card" data-reveal>
-          <div class="project-card__image">
-            <!-- PLACEHOLDER: Imagen proyecto 02 -->
-            <div style="width:100%;height:100%;background:#ccc9c0;"></div>
-          </div>
-          <div class="project-card__info">
-            <h2 class="project-card__title">Nombre del proyecto</h2>
-            <p class="project-card__desc">Breve descripción del problema resuelto</p>
-          </div>
-        </a>
-
-        <a href="trabajo/proyecto-03.html" class="project-card" data-reveal>
-          <div class="project-card__image">
-            <!-- PLACEHOLDER: Imagen proyecto 03 -->
-            <div style="width:100%;height:100%;background:#c5c2ba;"></div>
-          </div>
-          <div class="project-card__info">
-            <h2 class="project-card__title">Nombre del proyecto</h2>
-            <p class="project-card__desc">Breve descripción del problema resuelto</p>
-          </div>
-        </a>
-
-        <a href="trabajo/proyecto-04.html" class="project-card" data-reveal>
-          <div class="project-card__image">
-            <!-- PLACEHOLDER: Imagen proyecto 04 — formato panorámico -->
-            <div style="width:100%;height:100%;background:#d2cfc8;"></div>
-          </div>
-          <div class="project-card__info">
-            <h2 class="project-card__title">Nombre del proyecto</h2>
-            <p class="project-card__desc">Breve descripción del problema resuelto</p>
-          </div>
-        </a>
-
-        <a href="trabajo/proyecto-05.html" class="project-card" data-reveal>
-          <div class="project-card__image">
-            <!-- PLACEHOLDER: Imagen proyecto 05 -->
-            <div style="width:100%;height:100%;background:#dbd8d1;"></div>
-          </div>
-          <div class="project-card__info">
-            <h2 class="project-card__title">Nombre del proyecto</h2>
-            <p class="project-card__desc">Breve descripción del problema resuelto</p>
-          </div>
-        </a>
-
+  <div class="work-grid">
+    <a href="trabajo/proyecto-01.html" class="work-grid__item" data-reveal>
+      <div class="work-grid__image">
+        <img src="img/project-01.jpg" alt="Aetnis" loading="lazy">
       </div>
-    </div>
-  </main>
+      <h2 class="work-grid__title">Aetnis</h2>
+      <p class="work-grid__desc">Identidad de marca</p>
+    </a>
+
+    <a href="trabajo/proyecto-02.html" class="work-grid__item" data-reveal>
+      <div class="work-grid__image">
+        <img src="img/project-02.jpg" alt="Verso" loading="lazy">
+      </div>
+      <h2 class="work-grid__title">Verso</h2>
+      <p class="work-grid__desc">Sistema de comunicación</p>
+    </a>
+
+    <a href="trabajo/proyecto-03.html" class="work-grid__item" data-reveal>
+      <div class="work-grid__image">
+        <img src="img/project-03.jpg" alt="Nómada" loading="lazy">
+      </div>
+      <h2 class="work-grid__title">Nómada</h2>
+      <p class="work-grid__desc">Estrategia de marca</p>
+    </a>
+
+    <a href="trabajo/proyecto-04.html" class="work-grid__item" data-reveal>
+      <div class="work-grid__image">
+        <img src="img/project-04.jpg" alt="Latente" loading="lazy">
+      </div>
+      <h2 class="work-grid__title">Latente</h2>
+      <p class="work-grid__desc">Dirección creativa</p>
+    </a>
+
+    <a href="trabajo/proyecto-05.html" class="work-grid__item" data-reveal>
+      <div class="work-grid__image">
+        <img src="img/project-05.jpg" alt="Origen" loading="lazy">
+      </div>
+      <h2 class="work-grid__title">Origen</h2>
+      <p class="work-grid__desc">Conceptualización de marca</p>
+    </a>
+  </div>
 
   <footer class="footer">
-    <span class="footer__copy">&copy; 2026 Alejandro Torres</span>
-    <span class="footer__copy">Ciudad de México</span>
+    <span class="footer__text">&copy; 2026 Alejandro Torres</span>
+    <span class="footer__text">Ciudad de México</span>
   </footer>
 
   <script src="js/main.js"></script>
