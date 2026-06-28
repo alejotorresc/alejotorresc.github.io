@@ -325,7 +325,7 @@ body { opacity: 0; }
 }
 
 .nav__overlay-links a {
-  font-size: clamp(32px, 8vw, 48px);
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: var(--ls-tight);
   text-transform: uppercase;
@@ -434,7 +434,7 @@ body { opacity: 0; }
 }
 
 .intro__text {
-  font-size: clamp(28px, 4vw, 52px);
+  font-size: clamp(18px, 1.6vw, 24px);
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -571,7 +571,7 @@ body { opacity: 0; }
 .work-index:hover .work-index__item:hover { opacity: 1; }
 
 .work-index__name {
-  font-size: clamp(30px, 4.5vw, 60px);
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -605,7 +605,7 @@ body { opacity: 0; }
 }
 
 .proj-name {
-  font-size: clamp(36px, 5vw, 68px);
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1.05;
@@ -687,7 +687,7 @@ body { opacity: 0; }
 }
 
 .proj-next__name {
-  font-size: clamp(26px, 3.5vw, 48px);
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: -0.02em;
   transition: opacity 0.35s ease-out;
@@ -726,7 +726,7 @@ body { opacity: 0; }
 .article-list:hover a:hover { opacity: 1; }
 
 .article-list__title {
-  font-size: 21px;
+  font-size: 18px;
   font-style: normal;
   letter-spacing: -0.005em;
   line-height: 1.35;
@@ -811,7 +811,7 @@ body { opacity: 0; }
 .contact__inner { max-width: 620px; }
 
 .contact__heading {
-  font-size: clamp(44px, 7vw, 92px);
+  font-size: 18px;
   font-weight: 400;
   font-style: normal;
   letter-spacing: -0.03em;
@@ -1078,7 +1078,7 @@ body { opacity: 0; }
   .nav__center a { font-size: 16px; }
   .nav__toggle { font-size: 16px; }
 
-  .work-index__name { font-size: clamp(26px, 4.5vw, 44px); }
+  .work-index__name { font-size: 16px; }
   .work-index__cat { font-size: 15px; }
 
   .proj-head { gap: 32px; }
@@ -1151,7 +1151,7 @@ body { opacity: 0; }
     padding: 36px var(--side) 0;
   }
 
-  .proj-name { font-size: 32px; }
+  .proj-name { font-size: 16px; }
 
   .proj-meta__row { padding: 12px 0; }
   .proj-meta__label { font-size: 11px; }
@@ -1210,7 +1210,7 @@ body { opacity: 0; }
   .archive__year { font-size: 11px; }
 
   /* Contact */
-  .contact__heading { font-size: 38px; margin-bottom: 24px; }
+  .contact__heading { font-size: 16px; margin-bottom: 24px; }
   .contact__text { font-size: 16px; margin-bottom: 36px; }
   .contact__links { flex-direction: column; gap: 16px; }
   .contact__link { font-size: 12px; padding: 4px 0; }
