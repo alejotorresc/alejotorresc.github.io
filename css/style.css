@@ -157,7 +157,7 @@ body { opacity: 0; }
 }
 
 .nav__logo {
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
@@ -181,7 +181,7 @@ body { opacity: 0; }
 }
 
 .nav__center a {
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
@@ -203,7 +203,7 @@ body { opacity: 0; }
 
 .nav__toggle {
   font-family: var(--font);
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
@@ -283,7 +283,7 @@ body { opacity: 0; }
 }
 
 .nav__overlay-logo {
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
@@ -1081,8 +1081,8 @@ body { opacity: 0; }
 
 @media (max-width: 1024px) {
   .nav__center { gap: 20px; }
-  .nav__center a { font-size: 11px; }
-  .nav__toggle { font-size: 11px; }
+  .nav__center a { font-size: 20px; }
+  .nav__toggle { font-size: 20px; }
 
   .work-index__name { font-size: clamp(26px, 4.5vw, 44px); }
   .work-index__cat { font-size: 15px; }
