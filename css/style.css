@@ -1169,6 +1169,7 @@ body { opacity: 0; }
 }
 
 a.archive__item {
+  display: block;
   color: inherit;
   text-decoration: none;
 }
