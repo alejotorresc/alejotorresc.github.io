@@ -269,6 +269,60 @@ document.addEventListener('DOMContentLoaded', () => {
     new MutationObserver(() => fitFooterName()).observe(footerName.closest('.footer'), { attributes: true, attributeFilter: ['class'] });
   }
 
+  // ── Lightbox ──
+  const projImages = document.querySelectorAll('.proj-full img, .proj-pair img');
+  if (projImages.length) {
+    const lb = document.createElement('div');
+    lb.className = 'lightbox';
+    lb.innerHTML = '<img class="lightbox__img" alt="">'
+      + '<button class="lightbox__close">Close</button>'
+      + '<button class="lightbox__arrow lightbox__arrow--prev">←</button>'
+      + '<button class="lightbox__arrow lightbox__arrow--next">→</button>'
+      + '<span class="lightbox__counter"></span>';
+    document.body.appendChild(lb);
+
+    const lbImg = lb.querySelector('.lightbox__img');
+    const lbCounter = lb.querySelector('.lightbox__counter');
+    const srcs = Array.from(projImages).map(img => img.src);
+    let idx = 0;
+
+    function showSlide(i) {
+      idx = (i + srcs.length) % srcs.length;
+      lbImg.src = srcs[idx];
+      lbCounter.textContent = (idx + 1) + ' / ' + srcs.length;
+    }
+
+    function openLb(i) {
+      showSlide(i);
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLb() {
+      lb.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    projImages.forEach((img, i) => {
+      img.addEventListener('click', () => openLb(i));
+    });
+
+    lb.querySelector('.lightbox__close').addEventListener('click', closeLb);
+    lb.querySelector('.lightbox__arrow--prev').addEventListener('click', () => showSlide(idx - 1));
+    lb.querySelector('.lightbox__arrow--next').addEventListener('click', () => showSlide(idx + 1));
+
+    lb.addEventListener('click', e => {
+      if (e.target === lb) closeLb();
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!lb.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLb();
+      if (e.key === 'ArrowLeft') showSlide(idx - 1);
+      if (e.key === 'ArrowRight') showSlide(idx + 1);
+    });
+  }
+
   // ── Reveal with stagger ──
   const els = document.querySelectorAll('[data-reveal], [data-reveal-image], .line-grow');
   if ('IntersectionObserver' in window) {

@@ -792,7 +792,78 @@ body { opacity: 0; }
   padding: 0 var(--side);
   margin-bottom: clamp(56px, 7vw, 96px);
 }
-.proj-full img { width: 100%; }
+.proj-full img { width: 100%; cursor: pointer; }
+
+/* ── Lightbox ── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox__img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  transition: opacity 0.25s ease;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: var(--side);
+  right: var(--side);
+  background: none;
+  border: none;
+  color: var(--fg);
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox__close:hover { opacity: 0.5; }
+
+.lightbox__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--fg);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox__arrow:hover { opacity: 0.5; }
+.lightbox__arrow--prev { left: var(--side); }
+.lightbox__arrow--next { right: var(--side); }
+
+.lightbox__counter {
+  position: absolute;
+  bottom: var(--side);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg);
+}
 
 .proj-pair {
   display: grid;
@@ -806,6 +877,7 @@ body { opacity: 0; }
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .proj-nav {
