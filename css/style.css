@@ -678,7 +678,7 @@ body { opacity: 0; }
 .proj-nav__link:hover { opacity: 0.6; }
 
 .proj-nav__label {
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
@@ -1066,8 +1066,8 @@ body { opacity: 0; }
 
 @media (max-width: 1024px) {
   .nav__center { gap: 20px; }
-  .nav__center a { font-size: 16px; }
-  .nav__toggle { font-size: 16px; }
+  .nav__center a { font-size: 18px; }
+  .nav__toggle { font-size: 18px; }
 
   .work-index__name { font-size: 16px; }
   .work-index__cat { font-size: 15px; }
