@@ -46,6 +46,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  font-variant-numeric: oldstyle-nums;
+  font-feature-settings: 'onum' 1;
 }
 
 img { display: block; max-width: 100%; height: auto; }
