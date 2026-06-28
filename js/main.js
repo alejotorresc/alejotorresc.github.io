@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cursor.style.top = cy + 'px';
     });
 
-    const interactives = 'a, button, .work-index__item, .feed__link, .proj-next__link';
+    const interactives = 'a, button, .work-index__item, .feed__link, .proj-nav__link';
 
     document.addEventListener('mouseover', e => {
       if (e.target.closest(interactives)) cursor.classList.add('cursor--active');
