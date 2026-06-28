@@ -157,8 +157,8 @@ body { opacity: 0; }
 }
 
 .nav__logo {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   transition: opacity 0.3s ease-out;
@@ -181,7 +181,7 @@ body { opacity: 0; }
 }
 
 .nav__center a {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
@@ -203,7 +203,7 @@ body { opacity: 0; }
 
 .nav__toggle {
   font-family: var(--font);
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
@@ -226,8 +226,8 @@ body { opacity: 0; }
   background: none;
   border: none;
   cursor: none;
-  width: 24px;
-  height: 14px;
+  width: 28px;
+  height: 16px;
   position: relative;
   z-index: 110;
   color: inherit;
@@ -238,7 +238,7 @@ body { opacity: 0; }
 .nav__menu-btn span {
   display: block;
   width: 100%;
-  height: 1px;
+  height: 1.5px;
   background: currentColor;
   position: absolute;
   left: 0;
@@ -433,7 +433,7 @@ body { opacity: 0; }
 
 .feed__row:last-child { margin-bottom: 0; }
 
-.feed__row--full { padding: 0; }
+.feed__row--full { }
 
 .feed__row--pair {
   display: grid;
@@ -1035,8 +1035,8 @@ body { opacity: 0; }
 
 @media (max-width: 1024px) {
   .nav__center { gap: 20px; }
-  .nav__center a { font-size: 12px; }
-  .nav__toggle { font-size: 10px; }
+  .nav__center a { font-size: 14px; }
+  .nav__toggle { font-size: 14px; }
 
   .work-index__name { font-size: clamp(26px, 4.5vw, 44px); }
   .work-index__cat { font-size: 15px; }
@@ -1079,7 +1079,7 @@ body { opacity: 0; }
   .feed__row { margin-bottom: 48px; }
   .feed__row--pair { grid-template-columns: 1fr; gap: 48px; }
   .feed__row--offset { padding-left: var(--side); }
-  .feed__row--full .feed__caption { padding: 0 var(--side); }
+  .feed__row--full .feed__caption { }
 
   .feed__name { font-size: 11px; }
   .feed__desc { font-size: 15px; }
