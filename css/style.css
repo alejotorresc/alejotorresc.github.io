@@ -28,8 +28,8 @@
   --faint: rgba(29, 29, 27, 0.08);
   --font: 'Bradford', Georgia, 'Times New Roman', serif;
   --side: clamp(24px, 5vw, 80px);
-  --ls: 0.1em;
-  --ls-tight: 0.04em;
+  --ls: 0.05em;
+  --ls-tight: 0.02em;
 }
 
 [data-theme="dark"] {
