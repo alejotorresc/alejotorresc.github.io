@@ -1,24 +1,16 @@
 @font-face {
-  font-family: 'Bradford';
-  src: url('../fonts/BradfordLL-Book.otf') format('opentype');
+  font-family: 'ABC Marist';
+  src: url('../fonts/ABCMarist-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Bradford';
-  src: url('../fonts/BradfordLL-BookItalic.otf') format('opentype');
+  font-family: 'ABC Marist';
+  src: url('../fonts/ABCMarist-RegularItalic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Bradford';
-  src: url('../fonts/BradfordLL-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
   font-display: swap;
 }
 
@@ -26,7 +18,7 @@
   --bg: #f5f2ec;
   --fg: #1d1d1b;
   --faint: rgba(29, 29, 27, 0.08);
-  --font: 'Bradford', Georgia, 'Times New Roman', serif;
+  --font: 'ABC Marist', Georgia, 'Times New Roman', serif;
   --side: clamp(20px, 2.5vw, 40px);
   --ls: 0.02em;
   --ls-tight: 0.01em;
