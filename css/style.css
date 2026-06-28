@@ -585,7 +585,6 @@ body { opacity: 0; }
    ═══════════════════════════════════════════════════════ */
 
 .proj-cover {
-  margin-top: 56px;
   overflow: hidden;
 }
 .proj-cover img {
@@ -1139,7 +1138,7 @@ body { opacity: 0; }
   .work-index__cat { font-size: 15px; }
 
   /* Project detail */
-  .proj-cover { margin-top: 48px; }
+  .proj-cover { }
 
   .proj-head {
     padding: 36px var(--side) 0;
