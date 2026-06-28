@@ -708,6 +708,90 @@ body { opacity: 0; }
 
 .proj-body p + p { margin-top: 1.4em; }
 
+.proj-section {
+  padding: 0 var(--side);
+  max-width: 720px;
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+.proj-section__label {
+  display: block;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+
+.proj-section p {
+  font-size: clamp(17px, 1.3vw, 20px);
+  line-height: 1.55;
+  letter-spacing: 0.005em;
+}
+
+.proj-section p + p { margin-top: 1.4em; }
+
+.proj-credits {
+  display: flex;
+  gap: clamp(48px, 6vw, 96px);
+  padding: clamp(48px, 6vw, 80px) var(--side);
+  max-width: 720px;
+  border-top: 1px solid color-mix(in srgb, var(--fg) 12%, transparent);
+}
+
+.proj-credits__col {
+  flex: 1;
+}
+
+.proj-credits__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.proj-credits__list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.proj-credits__role {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.proj-credits__name {
+  font-size: 14px;
+  font-style: italic;
+  letter-spacing: var(--ls-tight);
+}
+
+.proj-download {
+  padding: 0 var(--side);
+  margin-bottom: clamp(48px, 6vw, 80px);
+}
+
+.proj-download__link {
+  font-size: 14px;
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.proj-download__link:hover {
+  opacity: 0.5;
+}
+
 .proj-full {
   padding: 0 var(--side);
   margin-bottom: clamp(24px, 3vw, 40px);
@@ -1225,6 +1309,11 @@ body { opacity: 0; }
   }
 
   .proj-body p { font-size: 17px; line-height: 1.5; }
+
+  .proj-section { max-width: 100%; margin-bottom: 40px; }
+  .proj-section p { font-size: 17px; line-height: 1.5; }
+
+  .proj-credits { flex-direction: column; gap: 32px; max-width: 100%; }
 
   .proj-pair { grid-template-columns: 1fr; }
 
