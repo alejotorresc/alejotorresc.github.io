@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = menuBtn.classList.toggle('open');
       overlay.classList.toggle('open', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
-      if (nav) nav.style.mixBlendMode = isOpen ? 'normal' : '';
       if (nav) nav.style.color = isOpen ? 'var(--fg)' : '';
     });
 

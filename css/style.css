@@ -30,8 +30,6 @@
   --side: clamp(24px, 5vw, 80px);
   --ls: 0.1em;
   --ls-tight: 0.04em;
-  --dim: 0.45;
-  --faded: 0.25;
 }
 
 [data-theme="dark"] {
@@ -127,9 +125,8 @@ body { opacity: 0; }
 
 /* ═══════════════════════════════════════════════════════
    NAV
-   One element. mix-blend-mode difference on hero pages,
-   normal on interior pages. The .nav--interior class
-   disables blend so text stays legible on light bg.
+   Hero pages: white over image, transitions to --fg on scroll.
+   Interior pages: always --fg.
    ═══════════════════════════════════════════════════════ */
 
 .nav {
@@ -140,26 +137,23 @@ body { opacity: 0; }
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   padding: 32px var(--side);
-  mix-blend-mode: difference;
   color: #fff;
   transition: padding 0.5s cubic-bezier(0.25, 1, 0.5, 1),
-              background 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+              background 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+              color 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .nav--scrolled {
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.nav--interior {
-  mix-blend-mode: normal;
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   color: var(--fg);
 }
 
-.nav--interior.nav--scrolled {
-  background: color-mix(in srgb, var(--bg) 85%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+.nav--interior {
+  color: var(--fg);
 }
 
 .nav__logo {
@@ -170,7 +164,7 @@ body { opacity: 0; }
   transition: opacity 0.3s ease-out;
 }
 
-.nav__logo:hover { opacity: 0.5; }
+.nav__logo:hover { opacity: 0.6; }
 
 .nav__center {
   display: flex;
@@ -186,7 +180,6 @@ body { opacity: 0; }
   font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
-  opacity: var(--dim);
   transition: opacity 0.3s ease-out;
   position: relative;
 }
@@ -203,10 +196,10 @@ body { opacity: 0; }
 }
 
 .nav__center a:hover::after { width: 100%; }
-.nav__center a:hover { opacity: 0.65; }
+.nav__center a:hover { opacity: 0.6; }
 
 .nav__center a.active {
-  opacity: 1;
+  font-weight: 700;
 }
 
 .nav__center a.active::after {
@@ -226,7 +219,6 @@ body { opacity: 0; }
   font-weight: 700;
   letter-spacing: var(--ls);
   text-transform: uppercase;
-  opacity: var(--dim);
   background: none;
   border: 1px solid currentColor;
   color: inherit;
@@ -240,7 +232,7 @@ body { opacity: 0; }
   .nav__toggle { cursor: pointer; }
 }
 
-.nav__toggle:hover { opacity: 1; }
+.nav__toggle:hover { opacity: 0.6; }
 
 .nav__menu-btn {
   display: none;
@@ -307,17 +299,16 @@ body { opacity: 0; }
 
 .nav__overlay-links a {
   font-size: clamp(32px, 8vw, 48px);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--ls-tight);
   text-transform: uppercase;
   color: var(--fg);
-  opacity: var(--dim);
   transition: opacity 0.3s ease-out;
   padding: 8px 0;
 }
 
-.nav__overlay-links a.active { opacity: 1; }
-.nav__overlay-links a:hover { opacity: 0.65; }
+.nav__overlay-links a.active { font-weight: 700; }
+.nav__overlay-links a:hover { opacity: 0.6; }
 
 .nav__overlay-controls {
   display: flex;
@@ -341,10 +332,9 @@ body { opacity: 0; }
   cursor: pointer;
   padding: 8px 18px;
   transition: opacity 0.3s ease-out;
-  opacity: var(--dim);
 }
 
-.nav__overlay-controls button:hover { opacity: 1; }
+.nav__overlay-controls button:hover { opacity: 0.6; }
 
 /* ═══════════════════════════════════════════════════════
    HERO
@@ -377,7 +367,6 @@ body { opacity: 0; }
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  mix-blend-mode: difference;
   color: #fff;
 }
 
@@ -385,7 +374,6 @@ body { opacity: 0; }
   font-size: 12px;
   font-style: italic;
   letter-spacing: var(--ls-tight);
-  opacity: var(--dim);
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -496,7 +484,6 @@ body { opacity: 0; }
   font-size: 12px;
   margin-top: 3px;
   color: var(--fg);
-  opacity: var(--dim);
   line-height: 1;
 }
 
@@ -641,7 +628,7 @@ body { opacity: 0; }
   align-items: center;
 }
 
-.proj-next__link:hover .proj-next__name { opacity: 0.35; }
+.proj-next__link:hover .proj-next__name { opacity: 0.6; }
 
 .proj-next__label {
   font-size: 12px;
@@ -661,7 +648,6 @@ body { opacity: 0; }
 
 .proj-next__arrow {
   font-size: 24px;
-  opacity: var(--faded);
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -804,7 +790,6 @@ body { opacity: 0; }
   font-weight: 700;
   letter-spacing: var(--ls);
   text-transform: uppercase;
-  opacity: var(--dim);
   transition: opacity 0.3s ease-out;
   position: relative;
 }
@@ -820,16 +805,16 @@ body { opacity: 0; }
   transition: width 0.35s ease-out;
 }
 
-.contact__link:hover { opacity: 1; }
+.contact__link:hover { opacity: 0.6; }
 .contact__link:hover::after { width: 100%; }
 
 /* ═══════════════════════════════════════════════════════
-   FOOTER — massive typographic name, Sean Hazen-inspired
+   FOOTER
    ═══════════════════════════════════════════════════════ */
 
 .footer {
   border-top: 1px solid var(--faint);
-  padding: clamp(48px, 8vw, 100px) var(--side) 32px;
+  padding: clamp(64px, 10vw, 140px) var(--side) 40px;
   overflow: hidden;
 }
 
@@ -839,19 +824,21 @@ body { opacity: 0; }
   letter-spacing: -0.04em;
   line-height: 0.9;
   text-transform: uppercase;
-  margin-bottom: clamp(32px, 4vw, 56px);
+  margin-bottom: clamp(48px, 6vw, 80px);
 }
 
 .footer__bar {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 .footer__info {
   display: flex;
-  gap: 4px;
-  flex-direction: column;
+  gap: 8px;
+  align-items: baseline;
 }
 
 .footer__text {
@@ -859,13 +846,11 @@ body { opacity: 0; }
   letter-spacing: var(--ls);
   text-transform: uppercase;
   color: var(--fg);
-  opacity: var(--dim);
 }
 
 .footer__links {
   display: flex;
   gap: 24px;
-  justify-content: center;
 }
 
 .footer__link {
@@ -873,21 +858,29 @@ body { opacity: 0; }
   letter-spacing: var(--ls);
   text-transform: uppercase;
   color: var(--fg);
-  opacity: var(--dim);
   transition: opacity 0.3s ease-out;
+  position: relative;
 }
 
-.footer__link:hover {
-  opacity: 1;
+.footer__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.35s ease-out;
 }
+
+.footer__link:hover { opacity: 0.6; }
+.footer__link:hover::after { width: 100%; }
 
 .footer__copy {
   font-size: 12px;
-  letter-spacing: var(--ls);
-  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: var(--ls-tight);
   color: var(--fg);
-  opacity: var(--dim);
-  text-align: right;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -1118,20 +1111,19 @@ body { opacity: 0; }
 
   /* Footer */
   .footer {
-    padding: 40px var(--side) 28px;
+    padding: 48px var(--side) 28px;
   }
 
   .footer__name {
     font-size: clamp(36px, 12vw, 64px);
-    white-space: normal;
-    margin-bottom: 28px;
+    margin-bottom: 32px;
   }
 
   .footer__bar {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    flex-direction: column;
+    gap: 16px;
   }
 
-  .footer__links { justify-content: flex-start; gap: 16px; }
-  .footer__copy { text-align: left; }
+  .footer__links { gap: 16px; }
+  .footer__info { flex-wrap: wrap; }
 }
