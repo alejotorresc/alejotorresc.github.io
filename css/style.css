@@ -943,11 +943,11 @@ body { opacity: 0; }
 }
 
 .footer__name {
-  font-size: clamp(36px, 8vw, 140px);
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1;
   text-transform: uppercase;
+  white-space: nowrap;
   margin-bottom: clamp(24px, 3vw, 40px);
 }
 
@@ -1231,8 +1231,6 @@ body { opacity: 0; }
   }
 
   .footer__name {
-    font-size: clamp(24px, 8vw, 48px);
-    font-weight: 400;
     margin-bottom: 20px;
   }
 

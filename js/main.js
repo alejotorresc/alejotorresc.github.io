@@ -240,6 +240,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Footer name auto-fit ──
+  const footerName = document.querySelector('.footer__name');
+  if (footerName) {
+    function fitFooterName() {
+      const parent = footerName.parentElement;
+      const maxW = parent.clientWidth;
+      let lo = 10, hi = 600, mid;
+      footerName.style.fontSize = hi + 'px';
+      while (hi - lo > 1) {
+        mid = (lo + hi) / 2;
+        footerName.style.fontSize = mid + 'px';
+        if (footerName.scrollWidth > maxW) {
+          hi = mid;
+        } else {
+          lo = mid;
+        }
+      }
+      footerName.style.fontSize = lo + 'px';
+    }
+    fitFooterName();
+    window.addEventListener('resize', fitFooterName);
+  }
+
   // ── Reveal with stagger ──
   const els = document.querySelectorAll('[data-reveal], [data-reveal-image], .line-grow');
   if ('IntersectionObserver' in window) {
