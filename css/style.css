@@ -129,7 +129,7 @@ body { opacity: 0; }
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 32px var(--side);
+  padding: 100px;
   color: #fff;
   transition: padding 0.5s cubic-bezier(0.25, 1, 0.5, 1),
               background 0.5s cubic-bezier(0.25, 1, 0.5, 1),
@@ -137,8 +137,7 @@ body { opacity: 0; }
 }
 
 .nav--scrolled {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 100px;
   background: var(--bg);
   color: var(--fg);
 }
