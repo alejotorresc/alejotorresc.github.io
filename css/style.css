@@ -1261,7 +1261,7 @@ a.archive__item {
 }
 
 .footer__top {
-  margin-bottom: clamp(40px, 5vw, 64px);
+  margin-bottom: clamp(16px, 2vw, 24px);
 }
 
 .footer__name {
@@ -1567,7 +1567,7 @@ a.archive__item {
   }
 
   .footer__top {
-    margin-bottom: 28px;
+    margin-bottom: 12px;
   }
 
   .footer__name {
