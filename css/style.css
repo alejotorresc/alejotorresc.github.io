@@ -1236,6 +1236,7 @@ body { opacity: 0; }
 
   .footer__name {
     font-size: 16px;
+    font-weight: 400;
   }
 
   .footer__links {
