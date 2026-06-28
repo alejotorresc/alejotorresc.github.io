@@ -15,7 +15,7 @@
 }
 
 :root {
-  --bg: #f5f2ec;
+  --bg: #f9f9f5;
   --fg: #1d1d1b;
   --faint: rgba(29, 29, 27, 0.08);
   --font: 'ABC Marist', Georgia, 'Times New Roman', serif;
@@ -1109,7 +1109,7 @@ body { opacity: 0; }
   .hero__tag { font-size: 12px; }
 
   /* Intro */
-  .intro { padding: 56px var(--side); }
+  .intro { padding: 56px var(--side); text-align: left; }
   .intro__text { font-size: 24px; }
 
   /* Feed */
