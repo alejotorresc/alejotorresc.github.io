@@ -425,7 +425,7 @@ body { opacity: 0; }
    ═══════════════════════════════════════════════════════ */
 
 .intro {
-  padding: clamp(100px, 14vw, 220px) clamp(40px, 14vw, 240px) clamp(80px, 12vw, 200px);
+  padding: clamp(80px, 12vw, 200px) clamp(40px, 14vw, 240px);
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -436,6 +436,7 @@ body { opacity: 0; }
   line-height: 1.35;
   letter-spacing: -0.015em;
   text-align: justify;
+  text-indent: 2em;
 }
 
 .intro__text strong {
@@ -1165,7 +1166,7 @@ body { opacity: 0; }
   .hero__tag { font-size: 12px; }
 
   /* Intro */
-  .intro { padding: 64px clamp(24px, 8vw, 60px) 48px; }
+  .intro { padding: 48px clamp(24px, 8vw, 60px); }
   .intro__text { font-size: 24px; text-align: left; }
 
   /* Feed */
