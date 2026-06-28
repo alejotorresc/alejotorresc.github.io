@@ -127,6 +127,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Hero slideshow ──
+  const slides = document.querySelectorAll('.hero__slide');
+  if (slides.length > 1) {
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000);
+  }
+
   // ── Hero parallax ──
   const heroImg = document.querySelector('.hero__img img');
   if (heroImg) {
