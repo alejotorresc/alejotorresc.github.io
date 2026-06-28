@@ -643,14 +643,18 @@ body { opacity: 0; }
 
 .proj-body p + p { margin-top: 1.4em; }
 
-.proj-full { margin-bottom: 2px; }
+.proj-full {
+  padding: 0 var(--side);
+  margin-bottom: clamp(16px, 2vw, 24px);
+}
 .proj-full img { width: 100%; }
 
 .proj-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2px;
-  margin-bottom: 2px;
+  gap: clamp(16px, 2vw, 24px);
+  padding: 0 var(--side);
+  margin-bottom: clamp(16px, 2vw, 24px);
 }
 
 .proj-pair img {
