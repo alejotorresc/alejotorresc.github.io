@@ -658,7 +658,7 @@ body { opacity: 0; }
 }
 
 .proj-head {
-  padding: clamp(64px, 8vw, 120px) var(--side) 0;
+  padding: clamp(64px, 8vw, 120px) var(--side) clamp(48px, 6vw, 80px);
   max-width: 900px;
 }
 
@@ -667,7 +667,7 @@ body { opacity: 0; }
   font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1;
-  margin-bottom: clamp(32px, 4vw, 56px);
+  margin-bottom: clamp(24px, 3vw, 40px);
 }
 
 .proj-meta {
@@ -711,7 +711,7 @@ body { opacity: 0; }
 .proj-section {
   padding: 0 var(--side);
   max-width: 720px;
-  margin-bottom: clamp(48px, 6vw, 80px);
+  margin-bottom: clamp(56px, 7vw, 96px);
 }
 
 .proj-section__label {
@@ -735,7 +735,7 @@ body { opacity: 0; }
 .proj-credits {
   display: flex;
   gap: clamp(48px, 6vw, 96px);
-  padding: clamp(48px, 6vw, 80px) var(--side);
+  padding: clamp(56px, 7vw, 96px) var(--side) clamp(40px, 5vw, 64px);
   max-width: 720px;
   border-top: 1px solid color-mix(in srgb, var(--fg) 12%, transparent);
 }
@@ -774,7 +774,6 @@ body { opacity: 0; }
 
 .proj-download {
   padding: 0 var(--side);
-  margin-bottom: clamp(48px, 6vw, 80px);
 }
 
 .proj-download__link {
@@ -794,7 +793,7 @@ body { opacity: 0; }
 
 .proj-full {
   padding: 0 var(--side);
-  margin-bottom: clamp(24px, 3vw, 40px);
+  margin-bottom: clamp(56px, 7vw, 96px);
 }
 .proj-full img { width: 100%; }
 
@@ -803,7 +802,7 @@ body { opacity: 0; }
   grid-template-columns: 1fr 1fr;
   gap: clamp(16px, 2vw, 24px);
   padding: 0 var(--side);
-  margin-bottom: clamp(24px, 3vw, 40px);
+  margin-bottom: clamp(56px, 7vw, 96px);
 }
 
 .proj-pair img {
@@ -816,9 +815,9 @@ body { opacity: 0; }
   display: flex;
   justify-content: center;
   gap: clamp(120px, 20vw, 360px);
-  padding: clamp(80px, 12vw, 160px) var(--side);
-  margin-top: clamp(40px, 6vw, 80px);
+  padding: clamp(64px, 8vw, 120px) var(--side);
   border-top: 1px solid color-mix(in srgb, var(--fg) 12%, transparent);
+  margin-top: clamp(56px, 7vw, 96px);
 }
 
 .proj-nav__link {
@@ -1310,10 +1309,13 @@ body { opacity: 0; }
 
   .proj-body p { font-size: 17px; line-height: 1.5; }
 
-  .proj-section { max-width: 100%; margin-bottom: 40px; }
+  .proj-section { max-width: 100%; margin-bottom: 48px; }
   .proj-section p { font-size: 17px; line-height: 1.5; }
 
-  .proj-credits { flex-direction: column; gap: 32px; max-width: 100%; }
+  .proj-full { margin-bottom: 48px; }
+  .proj-pair { margin-bottom: 48px; }
+
+  .proj-credits { flex-direction: column; gap: 32px; max-width: 100%; padding-top: 48px; padding-bottom: 32px; }
 
   .proj-pair { grid-template-columns: 1fr; }
 
