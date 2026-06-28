@@ -12,11 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.querySelector('.nav__menu-btn');
   const overlay = document.querySelector('.nav__overlay');
 
+  const nav = document.querySelector('.nav');
   if (menuBtn && overlay) {
     menuBtn.addEventListener('click', () => {
       const isOpen = menuBtn.classList.toggle('open');
       overlay.classList.toggle('open', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
+      if (nav) nav.style.mixBlendMode = isOpen ? 'normal' : '';
+      if (nav) nav.style.color = isOpen ? 'var(--fg)' : '';
     });
 
     overlay.querySelectorAll('a').forEach(a =>
@@ -32,6 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('theme');
   if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
 
+  function updateThemeLabels() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
+      btn.textContent = isDark ? 'Light' : 'Dark';
+    });
+  }
+
+  updateThemeLabels();
+
   document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
     btn.addEventListener('click', () => {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
@@ -42,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
       }
+      updateThemeLabels();
     });
   });
 
@@ -102,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ── Nav scroll compact ──
-  const nav = document.querySelector('.nav');
   if (nav) {
     let navTicking = false;
     window.addEventListener('scroll', () => {
