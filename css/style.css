@@ -249,11 +249,7 @@ body { opacity: 0; }
 .nav__menu-btn span:nth-child(2) { bottom: 0; }
 
 .nav__menu-btn.open {
-  position: fixed;
-  top: 22px;
-  right: var(--side);
   color: var(--fg);
-  z-index: 110;
 }
 
 .nav__menu-btn.open span:nth-child(1) { top: 50%; transform: rotate(45deg); }

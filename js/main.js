@@ -18,7 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = menuBtn.classList.toggle('open');
       overlay.classList.toggle('open', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
-      if (nav) nav.style.color = isOpen ? 'var(--fg)' : '';
+      if (nav) {
+        nav.style.color = isOpen ? 'var(--fg)' : '';
+        nav.style.zIndex = isOpen ? '110' : '';
+      }
     });
 
     overlay.querySelectorAll('a').forEach(a =>
@@ -26,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menuBtn.classList.remove('open');
         overlay.classList.remove('open');
         document.body.style.overflow = '';
+        if (nav) nav.style.zIndex = '';
       })
     );
   }
