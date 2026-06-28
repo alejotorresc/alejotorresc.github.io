@@ -19,7 +19,7 @@
   --fg: #1d1d1b;
   --faint: rgba(29, 29, 27, 0.08);
   --font: 'ABC Marist', Georgia, 'Times New Roman', serif;
-  --side: clamp(20px, 2.5vw, 40px);
+  --side: clamp(16px, 1.5vw, 24px);
   --ls: 0.02em;
   --ls-tight: 0.01em;
 }
@@ -42,6 +42,7 @@ html {
 
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
+strong, b { font-weight: 400; }
 
 /* ═══════════════════════════════════════════════════════
    CUSTOM CURSOR
@@ -183,7 +184,7 @@ body { opacity: 0; }
 .nav__center a:hover { opacity: 0.6; }
 
 .nav__center a.active {
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .nav__right {
@@ -333,7 +334,7 @@ body { opacity: 0; }
   padding: 8px 0;
 }
 
-.nav__overlay-links a.active { font-weight: 700; }
+.nav__overlay-links a.active { font-weight: 400; }
 .nav__overlay-links a:hover { opacity: 0.6; }
 
 .nav__overlay-controls {
@@ -440,7 +441,7 @@ body { opacity: 0; }
 }
 
 .intro__text strong {
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   font-size: 0.85em;
@@ -510,7 +511,7 @@ body { opacity: 0; }
 .feed__name {
   display: block;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   line-height: 1;
@@ -540,7 +541,7 @@ body { opacity: 0; }
 .section-label {
   padding: 140px var(--side) 48px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   color: var(--fg);
@@ -622,7 +623,7 @@ body { opacity: 0; }
 
 .proj-meta__label {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   color: var(--fg);
@@ -678,7 +679,7 @@ body { opacity: 0; }
 
 .proj-next__label {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   color: var(--fg);
@@ -756,7 +757,7 @@ body { opacity: 0; }
 
 .about__label {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   color: var(--fg);
@@ -773,7 +774,7 @@ body { opacity: 0; }
 
 .about__cv-label {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   color: var(--fg);
@@ -833,7 +834,7 @@ body { opacity: 0; }
 
 .contact__link {
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   transition: opacity 0.3s ease-out;
@@ -900,7 +901,7 @@ body { opacity: 0; }
 .archive__type {
   display: block;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   line-height: 1;
@@ -935,6 +936,7 @@ body { opacity: 0; }
 }
 
 .footer__name {
+  display: inline-block;
   font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1;

@@ -263,7 +263,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     fitFooterName();
     window.addEventListener('resize', fitFooterName);
+    setTimeout(fitFooterName, 100);
     setTimeout(fitFooterName, 500);
+    setTimeout(fitFooterName, 1500);
+    new MutationObserver(() => fitFooterName()).observe(footerName.closest('.footer'), { attributes: true, attributeFilter: ['class'] });
   }
 
   // ── Reveal with stagger ──
