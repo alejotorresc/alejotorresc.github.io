@@ -1165,8 +1165,8 @@ body { opacity: 0; }
   .hero__tag { font-size: 12px; }
 
   /* Intro */
-  .intro { padding: 56px var(--side) 40px; }
-  .intro__text { font-size: 24px; }
+  .intro { padding: 64px clamp(24px, 8vw, 60px) 48px; }
+  .intro__text { font-size: 24px; text-align: left; }
 
   /* Feed */
   .feed { padding: 56px 0; }
