@@ -660,8 +660,9 @@ body { opacity: 0; }
 }
 
 .proj-next {
-  padding: clamp(64px, 8vw, 120px) var(--side);
+  padding: clamp(80px, 12vw, 180px) var(--side);
   border-top: 1px solid var(--faint);
+  margin-top: clamp(80px, 12vw, 180px);
 }
 
 .proj-next__link {
@@ -923,7 +924,7 @@ body { opacity: 0; }
    ═══════════════════════════════════════════════════════ */
 
 .footer {
-  padding: clamp(120px, 16vw, 240px) var(--side) 40px;
+  padding: clamp(80px, 12vw, 160px) var(--side) 40px;
 }
 
 .footer__top {
