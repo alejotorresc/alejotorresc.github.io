@@ -940,7 +940,6 @@ body { opacity: 0; }
 
 .footer__top {
   margin-bottom: clamp(40px, 5vw, 64px);
-  overflow: hidden;
 }
 
 .footer__name {

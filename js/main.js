@@ -244,8 +244,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerName = document.querySelector('.footer__name');
   if (footerName) {
     function fitFooterName() {
-      const parent = footerName.parentElement;
-      const maxW = parent.clientWidth;
+      const footer = footerName.closest('.footer');
+      const style = getComputedStyle(footer);
+      const maxW = footer.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
       let lo = 10, hi = 600, mid;
       footerName.style.fontSize = hi + 'px';
       while (hi - lo > 1) {
