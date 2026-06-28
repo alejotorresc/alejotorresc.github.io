@@ -1271,7 +1271,7 @@ a.archive__item {
   line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
-  margin-bottom: clamp(24px, 3vw, 40px);
+  margin-bottom: 0;
 }
 
 .footer__links {
@@ -1571,7 +1571,7 @@ a.archive__item {
   }
 
   .footer__name {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .footer__links {
