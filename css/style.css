@@ -248,12 +248,6 @@ body { opacity: 0; }
 .nav__menu-btn span:nth-child(1) { top: 0; }
 .nav__menu-btn span:nth-child(2) { bottom: 0; }
 
-.nav__menu-btn.open {
-  color: var(--fg);
-}
-
-.nav__menu-btn.open span:nth-child(1) { top: 50%; transform: rotate(45deg); }
-.nav__menu-btn.open span:nth-child(2) { bottom: auto; top: 50%; transform: rotate(-45deg); }
 
 /* ═══════════════════════════════════════════════════════
    MOBILE NAV OVERLAY
@@ -277,19 +271,39 @@ body { opacity: 0; }
   display: flex;
 }
 
-.nav__overlay-close {
+.nav__overlay-top {
   position: absolute;
-  top: 22px;
-  right: var(--side);
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px var(--side);
+}
+
+.nav__overlay-logo {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
+  color: var(--fg);
+  transition: opacity 0.3s ease-out;
+}
+
+.nav__overlay-logo:hover { opacity: 0.6; }
+
+.nav__overlay-close {
+  position: relative;
   width: 28px;
   height: 28px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 2;
   -webkit-appearance: none;
   appearance: none;
+  flex-shrink: 0;
 }
 
 .nav__overlay-close::before,

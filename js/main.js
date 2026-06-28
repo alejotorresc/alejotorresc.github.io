@@ -14,28 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const nav = document.querySelector('.nav');
   function closeMenu() {
-    menuBtn.classList.remove('open');
     overlay.classList.remove('open');
     document.body.style.overflow = '';
-    if (nav) {
-      nav.style.color = '';
-      nav.style.background = '';
-      nav.style.backdropFilter = '';
-      nav.style.webkitBackdropFilter = '';
-    }
+    if (nav) nav.style.display = '';
   }
 
   if (menuBtn && overlay) {
     menuBtn.addEventListener('click', () => {
-      const isOpen = menuBtn.classList.toggle('open');
-      overlay.classList.toggle('open', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-      if (nav) {
-        nav.style.color = isOpen ? 'var(--fg)' : '';
-        nav.style.background = isOpen ? 'transparent' : '';
-        nav.style.backdropFilter = isOpen ? 'none' : '';
-        nav.style.webkitBackdropFilter = isOpen ? 'none' : '';
-      }
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      if (nav) nav.style.display = 'none';
     });
 
     const closeBtn = overlay.querySelector('.nav__overlay-close');
