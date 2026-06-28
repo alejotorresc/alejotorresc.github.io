@@ -939,11 +939,12 @@ body { opacity: 0; }
 }
 
 .footer__name {
-  font-size: clamp(64px, 17vw, 360px);
+  font-size: clamp(32px, 7vw, 120px);
   font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 0.85;
+  letter-spacing: -0.02em;
+  line-height: 1;
   text-transform: uppercase;
+  white-space: nowrap;
   margin-bottom: clamp(40px, 5vw, 64px);
 }
 
@@ -1224,7 +1225,8 @@ body { opacity: 0; }
   }
 
   .footer__name {
-    font-size: clamp(44px, 14vw, 80px);
+    font-size: clamp(24px, 8.2vw, 56px);
+    white-space: nowrap;
     margin-bottom: 28px;
   }
 
