@@ -13,24 +13,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const overlay = document.querySelector('.nav__overlay');
 
   const nav = document.querySelector('.nav');
+  function closeMenu() {
+    menuBtn.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    if (nav) nav.style.color = '';
+  }
+
   if (menuBtn && overlay) {
     menuBtn.addEventListener('click', () => {
       const isOpen = menuBtn.classList.toggle('open');
       overlay.classList.toggle('open', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
-      if (nav) {
-        nav.style.color = isOpen ? 'var(--fg)' : '';
-        nav.style.zIndex = isOpen ? '110' : '';
-      }
+      if (nav) nav.style.color = isOpen ? 'var(--fg)' : '';
     });
 
+    const closeBtn = overlay.querySelector('.nav__overlay-close');
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+
     overlay.querySelectorAll('a').forEach(a =>
-      a.addEventListener('click', () => {
-        menuBtn.classList.remove('open');
-        overlay.classList.remove('open');
-        document.body.style.overflow = '';
-        if (nav) nav.style.zIndex = '';
-      })
+      a.addEventListener('click', closeMenu)
     );
   }
 
