@@ -93,6 +93,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Nav scroll compact ──
+  const nav = document.querySelector('.nav');
+  if (nav) {
+    let navTicking = false;
+    window.addEventListener('scroll', () => {
+      if (!navTicking) {
+        requestAnimationFrame(() => {
+          nav.classList.toggle('nav--scrolled', window.scrollY > 60);
+          navTicking = false;
+        });
+        navTicking = true;
+      }
+    });
+  }
+
   // ── Hero parallax ──
   const heroImg = document.querySelector('.hero__img img');
   if (heroImg) {
