@@ -799,7 +799,6 @@ body { opacity: 0; }
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -813,56 +812,104 @@ body { opacity: 0; }
   pointer-events: all;
 }
 
+.lightbox__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: blur(80px) saturate(1.4);
+  transform: scale(1.3);
+  opacity: 0.5;
+}
+
+.lightbox__overlay {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+}
+
 .lightbox__img {
-  max-width: 90vw;
-  max-height: 85vh;
+  position: relative;
+  max-width: 88vw;
+  max-height: 82vh;
   object-fit: contain;
-  transition: opacity 0.25s ease;
+  border-radius: 2px;
+  z-index: 1;
 }
 
 .lightbox__close {
   position: absolute;
-  top: var(--side);
-  right: var(--side);
+  top: clamp(16px, 2vw, 28px);
+  right: clamp(16px, 2vw, 28px);
+  z-index: 2;
+  width: 32px;
+  height: 32px;
   background: none;
-  border: none;
-  color: var(--fg);
-  font-size: 18px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  border: 1px solid color-mix(in srgb, var(--fg) 20%, transparent);
+  border-radius: 50%;
   cursor: pointer;
-  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.3s ease;
 }
 
+.lightbox__close::before,
+.lightbox__close::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 1px;
+  background: var(--fg);
+}
+
+.lightbox__close::before { transform: rotate(45deg); }
+.lightbox__close::after  { transform: rotate(-45deg); }
 .lightbox__close:hover { opacity: 0.5; }
 
 .lightbox__arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  z-index: 2;
+  width: 36px;
+  height: 36px;
   background: none;
-  border: none;
+  border: 1px solid color-mix(in srgb, var(--fg) 20%, transparent);
+  border-radius: 50%;
   color: var(--fg);
-  font-size: 24px;
+  font-size: 16px;
   cursor: pointer;
-  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: opacity 0.3s ease;
 }
 
 .lightbox__arrow:hover { opacity: 0.5; }
-.lightbox__arrow--prev { left: var(--side); }
-.lightbox__arrow--next { right: var(--side); }
+.lightbox__arrow--prev { left: clamp(16px, 2vw, 28px); }
+.lightbox__arrow--next { right: clamp(16px, 2vw, 28px); }
 
-.lightbox__counter {
+.lightbox__dots {
   position: absolute;
-  bottom: var(--side);
+  bottom: clamp(16px, 2vw, 28px);
   left: 50%;
   transform: translateX(-50%);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--fg);
+  z-index: 2;
+  display: flex;
+  gap: 8px;
+}
+
+.lightbox__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--fg) 25%, transparent);
+  transition: background 0.3s ease;
+}
+
+.lightbox__dot.active {
+  background: var(--fg);
 }
 
 .proj-pair {

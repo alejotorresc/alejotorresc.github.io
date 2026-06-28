@@ -274,22 +274,29 @@ document.addEventListener('DOMContentLoaded', () => {
   if (projImages.length) {
     const lb = document.createElement('div');
     lb.className = 'lightbox';
-    lb.innerHTML = '<img class="lightbox__img" alt="">'
-      + '<button class="lightbox__close">Close</button>'
+
+    const srcs = Array.from(projImages).map(img => img.src);
+    const dotsHtml = srcs.map((_, i) => '<span class="lightbox__dot' + (i === 0 ? ' active' : '') + '"></span>').join('');
+
+    lb.innerHTML = '<div class="lightbox__bg"></div>'
+      + '<div class="lightbox__overlay"></div>'
+      + '<img class="lightbox__img" alt="">'
+      + '<button class="lightbox__close" aria-label="Close"></button>'
       + '<button class="lightbox__arrow lightbox__arrow--prev">←</button>'
       + '<button class="lightbox__arrow lightbox__arrow--next">→</button>'
-      + '<span class="lightbox__counter"></span>';
+      + '<div class="lightbox__dots">' + dotsHtml + '</div>';
     document.body.appendChild(lb);
 
     const lbImg = lb.querySelector('.lightbox__img');
-    const lbCounter = lb.querySelector('.lightbox__counter');
-    const srcs = Array.from(projImages).map(img => img.src);
+    const lbBg = lb.querySelector('.lightbox__bg');
+    const dots = lb.querySelectorAll('.lightbox__dot');
     let idx = 0;
 
     function showSlide(i) {
       idx = (i + srcs.length) % srcs.length;
       lbImg.src = srcs[idx];
-      lbCounter.textContent = (idx + 1) + ' / ' + srcs.length;
+      lbBg.style.backgroundImage = 'url(' + srcs[idx] + ')';
+      dots.forEach((d, j) => d.classList.toggle('active', j === idx));
     }
 
     function openLb(i) {
@@ -312,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lb.querySelector('.lightbox__arrow--next').addEventListener('click', () => showSlide(idx + 1));
 
     lb.addEventListener('click', e => {
-      if (e.target === lb) closeLb();
+      if (e.target === lb || e.target.classList.contains('lightbox__overlay')) closeLb();
     });
 
     document.addEventListener('keydown', e => {
