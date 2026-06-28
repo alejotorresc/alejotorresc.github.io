@@ -658,35 +658,35 @@ body { opacity: 0; }
 }
 
 .proj-head {
-  max-width: 640px;
-  padding: 64px var(--side) 0;
+  padding: clamp(64px, 8vw, 120px) var(--side) 0;
+  max-width: 900px;
 }
 
 .proj-name {
-  font-size: 18px;
+  font-size: clamp(32px, 4vw, 56px);
   font-weight: 400;
-  letter-spacing: -0.025em;
-  line-height: 1.05;
-  margin-bottom: 28px;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: clamp(32px, 4vw, 56px);
 }
 
 .proj-meta {
   display: flex;
-  gap: 32px;
+  gap: clamp(32px, 4vw, 64px);
 }
 
 .proj-meta__row {
   display: flex;
-  gap: 8px;
-  align-items: baseline;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .proj-meta__label {
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 400;
-  letter-spacing: var(--ls);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--fg);
+  opacity: 0.5;
 }
 
 .proj-meta__value {
@@ -696,13 +696,13 @@ body { opacity: 0; }
 }
 
 .proj-body {
-  padding: 72px var(--side);
-  max-width: 640px;
+  padding: clamp(48px, 6vw, 96px) var(--side);
+  max-width: 720px;
 }
 
 .proj-body p {
   font-size: clamp(17px, 1.3vw, 20px);
-  line-height: 1.5;
+  line-height: 1.55;
   letter-spacing: 0.005em;
 }
 
@@ -710,7 +710,7 @@ body { opacity: 0; }
 
 .proj-full {
   padding: 0 var(--side);
-  margin-bottom: clamp(16px, 2vw, 24px);
+  margin-bottom: clamp(24px, 3vw, 40px);
 }
 .proj-full img { width: 100%; }
 
@@ -719,7 +719,7 @@ body { opacity: 0; }
   grid-template-columns: 1fr 1fr;
   gap: clamp(16px, 2vw, 24px);
   padding: 0 var(--side);
-  margin-bottom: clamp(16px, 2vw, 24px);
+  margin-bottom: clamp(24px, 3vw, 40px);
 }
 
 .proj-pair img {
@@ -732,8 +732,9 @@ body { opacity: 0; }
   display: flex;
   justify-content: center;
   gap: clamp(120px, 20vw, 360px);
-  padding: clamp(80px, 12vw, 180px) var(--side);
-  margin-top: clamp(64px, 10vw, 140px);
+  padding: clamp(80px, 12vw, 160px) var(--side);
+  margin-top: clamp(40px, 6vw, 80px);
+  border-top: 1px solid color-mix(in srgb, var(--fg) 12%, transparent);
 }
 
 .proj-nav__link {
@@ -1209,13 +1210,13 @@ body { opacity: 0; }
   .proj-cover { }
 
   .proj-head {
-    padding: 36px var(--side) 0;
+    padding: 40px var(--side) 0;
   }
 
-  .proj-name { font-size: 16px; }
+  .proj-name { font-size: 28px; }
 
-  .proj-meta { flex-wrap: wrap; gap: 16px; }
-  .proj-meta__label { font-size: 11px; }
+  .proj-meta { flex-wrap: wrap; gap: 24px; }
+  .proj-meta__label { font-size: 10px; }
   .proj-meta__value { font-size: 13px; }
 
   .proj-body {
