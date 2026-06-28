@@ -743,49 +743,55 @@ a, button { cursor: none; }
 .contact__link:hover::after { width: 100%; }
 
 /* ═══════════════════════════════════════════════════════
-   FOOTER — three-column editorial grid
+   FOOTER — large typographic name + minimal info line
    ═══════════════════════════════════════════════════════ */
 
 .footer {
   border-top: 1px solid var(--faint);
-  padding: 56px var(--side) 48px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
+  padding: clamp(64px, 10vw, 120px) var(--side) 48px;
 }
 
-.footer__col {
+.footer__name {
+  font-size: clamp(48px, 10vw, 120px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  margin-bottom: clamp(40px, 6vw, 80px);
+}
+
+.footer__bar {
   display: flex;
-  flex-direction: column;
-  gap: 3px;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.footer__col--center { text-align: center; }
-.footer__col--right { text-align: right; }
-
-.footer__heading {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: var(--ls);
-  text-transform: uppercase;
-  margin-bottom: 10px;
+.footer__info {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
 }
 
 .footer__text {
-  font-size: 15px;
+  font-size: 14px;
   font-style: italic;
   color: var(--mid);
-  line-height: 1.65;
+}
+
+.footer__links {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
 }
 
 .footer__link {
-  font-size: 15px;
-  font-style: italic;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
   color: var(--mid);
-  line-height: 1.65;
   transition: color 0.3s ease-out;
-  position: relative;
-  display: inline;
   background-image: linear-gradient(currentColor, currentColor);
   background-size: 0 1px;
   background-position: 0 100%;
@@ -799,7 +805,7 @@ a, button { cursor: none; }
 }
 
 .footer__copy {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--mid);
 }
 
@@ -1027,16 +1033,19 @@ a, button { cursor: none; }
 
   /* Footer */
   .footer {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding: 40px var(--side) 36px;
+    padding: 48px var(--side) 36px;
   }
 
-  .footer__col--center,
-  .footer__col--right { text-align: left; }
+  .footer__name {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
 
-  .footer__heading { font-size: 12px; }
-  .footer__text,
-  .footer__link { font-size: 15px; }
-  .footer__copy { font-size: 13px; }
+  .footer__bar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer__info { gap: 16px; flex-wrap: wrap; }
+  .footer__links { gap: 16px; flex-wrap: wrap; }
 }
