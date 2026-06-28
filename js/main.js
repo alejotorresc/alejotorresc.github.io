@@ -70,6 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
       btn.textContent = l === 'en' ? 'ES' : 'EN';
     });
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.style.display = el.dataset.lang === l ? '' : 'none';
+    });
   }
 
   // ── Custom cursor ──
