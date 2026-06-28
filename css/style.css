@@ -1087,7 +1087,7 @@ body { opacity: 0; }
 }
 
 @media (max-width: 768px) {
-  :root { --side: 24px; }
+  :root { --side: 12px; }
 
   .nav__center,
   .nav__toggle { display: none; }
