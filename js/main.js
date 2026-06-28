@@ -245,8 +245,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (footerName) {
     function fitFooterName() {
       const footer = footerName.closest('.footer');
-      const style = getComputedStyle(footer);
-      const maxW = footer.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+      const cs = getComputedStyle(footer);
+      const maxW = footer.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      if (maxW < 50) return;
       let lo = 10, hi = 600, mid;
       footerName.style.fontSize = hi + 'px';
       while (hi - lo > 1) {
@@ -262,6 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     fitFooterName();
     window.addEventListener('resize', fitFooterName);
+    setTimeout(fitFooterName, 500);
   }
 
   // ── Reveal with stagger ──
