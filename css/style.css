@@ -439,14 +439,19 @@ body { opacity: 0; }
   text-indent: 2em;
 }
 
+.intro__link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+}
+
 .intro__text strong {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   font-size: 0.85em;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1.5px;
+  text-decoration: none;
 }
 
 .intro__text em {
