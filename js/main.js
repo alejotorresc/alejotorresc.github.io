@@ -17,7 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     menuBtn.classList.remove('open');
     overlay.classList.remove('open');
     document.body.style.overflow = '';
-    if (nav) nav.style.color = '';
+    if (nav) {
+      nav.style.color = '';
+      nav.style.background = '';
+      nav.style.backdropFilter = '';
+      nav.style.webkitBackdropFilter = '';
+    }
   }
 
   if (menuBtn && overlay) {
@@ -25,7 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = menuBtn.classList.toggle('open');
       overlay.classList.toggle('open', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
-      if (nav) nav.style.color = isOpen ? 'var(--fg)' : '';
+      if (nav) {
+        nav.style.color = isOpen ? 'var(--fg)' : '';
+        nav.style.background = isOpen ? 'transparent' : '';
+        nav.style.backdropFilter = isOpen ? 'none' : '';
+        nav.style.webkitBackdropFilter = isOpen ? 'none' : '';
+      }
     });
 
     const closeBtn = overlay.querySelector('.nav__overlay-close');
