@@ -727,7 +727,7 @@ body { opacity: 0; }
 
 .article-list__title {
   font-size: 21px;
-  font-style: italic;
+  font-style: normal;
   letter-spacing: -0.005em;
   line-height: 1.35;
 }
@@ -813,7 +813,7 @@ body { opacity: 0; }
 .contact__heading {
   font-size: clamp(44px, 7vw, 92px);
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
   letter-spacing: -0.03em;
   line-height: 0.95;
   margin-bottom: 32px;
