@@ -1188,7 +1188,7 @@ a.archive__item {
 
 .archive-detail__header {
   text-align: center;
-  padding: clamp(80px, 10vw, 160px) var(--side) clamp(48px, 6vw, 80px);
+  padding: clamp(120px, 18vw, 280px) var(--side) clamp(80px, 12vw, 200px);
 }
 
 .archive-detail__type {
