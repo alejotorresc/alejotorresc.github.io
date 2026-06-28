@@ -60,7 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function applyLang(l) {
     document.documentElement.lang = l;
     document.querySelectorAll('[data-en]').forEach(el => {
-      el.textContent = l === 'en' ? el.dataset.en : (el.dataset.es || el.dataset.en);
+      const val = l === 'en' ? el.dataset.en : (el.dataset.es || el.dataset.en);
+      if (val.includes('<')) {
+        el.innerHTML = val;
+      } else {
+        el.textContent = val;
+      }
     });
     document.querySelectorAll('[data-lang-toggle]').forEach(btn => {
       btn.textContent = l === 'en' ? 'ES' : 'EN';

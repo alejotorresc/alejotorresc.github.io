@@ -252,6 +252,9 @@ a, button { cursor: none; }
   height: 14px;
   position: relative;
   z-index: 110;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .nav__menu-btn span {
@@ -266,6 +269,10 @@ a, button { cursor: none; }
 
 .nav__menu-btn span:nth-child(1) { top: 0; }
 .nav__menu-btn span:nth-child(2) { bottom: 0; }
+
+.nav__menu-btn.open {
+  color: var(--fg);
+}
 
 .nav__menu-btn.open span:nth-child(1) { top: 50%; transform: rotate(45deg); }
 .nav__menu-btn.open span:nth-child(2) { bottom: auto; top: 50%; transform: rotate(-45deg); }
@@ -283,7 +290,7 @@ a, button { cursor: none; }
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0;
+  padding: 0 var(--side);
 }
 
 .nav__overlay.open {
@@ -295,31 +302,38 @@ a, button { cursor: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 48px;
+  gap: 4px;
+  margin-bottom: 56px;
 }
 
 .nav__overlay-links a {
-  font-size: 28px;
+  font-size: clamp(32px, 8vw, 48px);
   font-weight: 400;
-  letter-spacing: var(--ls-tight);
+  font-style: italic;
+  letter-spacing: -0.02em;
   color: var(--fg);
-  opacity: 0.4;
+  opacity: 0.25;
   transition: opacity 0.3s ease-out;
-  padding: 12px 0;
+  padding: 8px 0;
 }
 
 .nav__overlay-links a.active { opacity: 1; }
+.nav__overlay-links a:hover { opacity: 0.7; }
 
 .nav__overlay-controls {
   display: flex;
-  gap: 24px;
+  gap: 32px;
+  position: absolute;
+  bottom: 48px;
+  left: 0;
+  right: 0;
+  justify-content: center;
 }
 
 .nav__overlay-controls button {
   font-family: var(--font);
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   color: var(--mid);
@@ -371,6 +385,37 @@ a, button { cursor: none; }
   font-style: italic;
   letter-spacing: var(--ls-tight);
   opacity: 0.6;
+}
+
+/* ═══════════════════════════════════════════════════════
+   INTRO — large editorial paragraph, Sean Hazen-inspired
+   ═══════════════════════════════════════════════════════ */
+
+.intro {
+  padding: clamp(80px, 12vw, 180px) var(--side);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.intro__text {
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.intro__text strong {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 0.85em;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+}
+
+.intro__text em {
+  font-style: italic;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -777,70 +822,68 @@ a, button { cursor: none; }
 .contact__link:hover::after { width: 100%; }
 
 /* ═══════════════════════════════════════════════════════
-   FOOTER — large typographic name + minimal info line
+   FOOTER — massive typographic name, Sean Hazen-inspired
    ═══════════════════════════════════════════════════════ */
 
 .footer {
   border-top: 1px solid var(--faint);
-  padding: clamp(64px, 10vw, 120px) var(--side) 48px;
+  padding: clamp(48px, 8vw, 100px) var(--side) 32px;
+  overflow: hidden;
 }
 
 .footer__name {
-  font-size: clamp(48px, 10vw, 120px);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 0.95;
-  margin-bottom: clamp(40px, 6vw, 80px);
+  font-size: clamp(64px, 14vw, 220px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.85;
+  text-transform: uppercase;
+  margin-bottom: clamp(32px, 4vw, 56px);
+  white-space: nowrap;
 }
 
 .footer__bar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: baseline;
-  flex-wrap: wrap;
-  gap: 16px;
 }
 
 .footer__info {
   display: flex;
-  gap: 24px;
-  align-items: baseline;
+  gap: 4px;
+  flex-direction: column;
 }
 
 .footer__text {
-  font-size: 14px;
-  font-style: italic;
+  font-size: 12px;
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
   color: var(--mid);
 }
 
 .footer__links {
   display: flex;
   gap: 24px;
-  align-items: baseline;
+  justify-content: center;
 }
 
 .footer__link {
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 12px;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   color: var(--mid);
   transition: color 0.3s ease-out;
-  background-image: linear-gradient(currentColor, currentColor);
-  background-size: 0 1px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.4s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease-out;
 }
 
 .footer__link:hover {
   color: var(--fg);
-  background-size: 100% 1px;
 }
 
 .footer__copy {
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
   color: var(--mid);
+  text-align: right;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -986,6 +1029,10 @@ a, button { cursor: none; }
 
   .hero__tag { font-size: 14px; }
 
+  /* Intro */
+  .intro { padding: 56px var(--side); }
+  .intro__text { font-size: 24px; }
+
   /* Feed */
   .feed { padding: 56px 0; }
   .feed__row { margin-bottom: 48px; }
@@ -1071,19 +1118,20 @@ a, button { cursor: none; }
 
   /* Footer */
   .footer {
-    padding: 48px var(--side) 36px;
+    padding: 40px var(--side) 28px;
   }
 
   .footer__name {
-    font-size: 36px;
-    margin-bottom: 32px;
+    font-size: clamp(36px, 12vw, 64px);
+    white-space: normal;
+    margin-bottom: 28px;
   }
 
   .footer__bar {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .footer__info { gap: 16px; flex-wrap: wrap; }
-  .footer__links { gap: 16px; flex-wrap: wrap; }
+  .footer__links { justify-content: flex-start; gap: 16px; }
+  .footer__copy { text-align: left; }
 }
