@@ -1115,8 +1115,8 @@ body { opacity: 0; }
   padding: 0 var(--side) clamp(80px, 10vw, 160px);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: clamp(16px, 2vw, 24px);
-  row-gap: clamp(40px, 5vw, 80px);
+  column-gap: var(--side);
+  row-gap: var(--side);
   align-items: start;
 }
 
@@ -1224,8 +1224,8 @@ a.archive__item {
   padding: 0 var(--side);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: clamp(16px, 2vw, 24px);
-  row-gap: clamp(40px, 5vw, 80px);
+  column-gap: var(--side);
+  row-gap: var(--side);
   align-items: start;
   margin-bottom: clamp(80px, 10vw, 160px);
 }
