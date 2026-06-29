@@ -330,6 +330,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── Ticker clone for seamless loop ──
+  const tickerStrip = document.querySelector('.ticker__strip');
+  if (tickerStrip) {
+    const items = tickerStrip.innerHTML;
+    tickerStrip.innerHTML = items + items;
+  }
+
   // ── Reveal with stagger ──
   const els = document.querySelectorAll('[data-reveal], [data-reveal-image], .line-grow');
   if ('IntersectionObserver' in window) {

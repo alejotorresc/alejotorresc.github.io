@@ -544,6 +544,116 @@ body { opacity: 0; }
 }
 
 /* ═══════════════════════════════════════════════════════
+   TICKER — archive marquee on homepage
+   ═══════════════════════════════════════════════════════ */
+
+.ticker {
+  padding: clamp(80px, 10vw, 160px) 0;
+}
+
+.ticker__header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 0 var(--side);
+  margin-bottom: clamp(24px, 3vw, 40px);
+}
+
+.ticker__heading {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
+}
+
+.ticker__view-all {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ticker__track {
+  overflow: hidden;
+  width: 100%;
+}
+
+.ticker__strip {
+  display: flex;
+  gap: clamp(12px, 1.5vw, 20px);
+  animation: ticker-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.ticker__strip:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker__item {
+  flex-shrink: 0;
+  display: block;
+}
+
+.ticker__img {
+  position: relative;
+  overflow: hidden;
+  width: clamp(240px, 22vw, 360px);
+  aspect-ratio: 3 / 4;
+}
+
+.ticker__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.ticker__item:hover .ticker__img img {
+  transform: scale(1.03);
+}
+
+.ticker__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ticker__item:hover .ticker__overlay {
+  opacity: 1;
+}
+
+.ticker__name {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.ticker__year {
+  display: block;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  margin-top: 2px;
+  line-height: 1;
+}
+
+/* ═══════════════════════════════════════════════════════
    SECTION LABEL — used on Work, Thinking
    ═══════════════════════════════════════════════════════ */
 
