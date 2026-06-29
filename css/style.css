@@ -483,12 +483,12 @@ body { opacity: 0; }
 }
 
 .feed__view-all {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 3px;
 }
 
 .feed__grid {
