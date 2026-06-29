@@ -1104,7 +1104,7 @@ a.thinking__item {
   right: var(--side);
   top: 50%;
   transform: translateY(-50%) scale(0.96);
-  width: clamp(240px, 22vw, 360px);
+  width: clamp(300px, 30vw, 480px);
   aspect-ratio: 3 / 4;
   pointer-events: none;
   z-index: 50;
