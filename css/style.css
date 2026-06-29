@@ -501,14 +501,26 @@ body { opacity: 0; }
   margin-bottom: 14px;
 }
 
+.feed__img {
+  position: relative;
+}
+
 .feed__img img {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.feed__link:hover .feed__img img { transform: scale(1.03); }
+.feed__img img:not(:first-child) {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.feed__img img.slide-active {
+  opacity: 1;
+}
 
 .feed__caption { line-height: 1.15; }
 
@@ -607,11 +619,6 @@ body { opacity: 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.ticker__item:hover .ticker__img img {
-  transform: scale(1.03);
 }
 
 .ticker__overlay {
@@ -721,14 +728,26 @@ body { opacity: 0; }
   margin-bottom: 14px;
 }
 
+.work-grid__img {
+  position: relative;
+}
+
 .work-grid__img img {
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.work-grid__item:hover .work-grid__img img { transform: scale(1.03); }
+.work-grid__img img:not(:first-child) {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.work-grid__img img.slide-active {
+  opacity: 1;
+}
 
 .work-grid__name {
   display: block;
@@ -1348,14 +1367,26 @@ a.thinking__item {
   overflow: hidden;
 }
 
+.archive__img {
+  position: relative;
+}
+
 .archive__img img {
   width: 100%;
   display: block;
-  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.archive__item:hover .archive__img img {
-  transform: scale(1.03);
+.archive__img img:not(:first-child) {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.archive__img img.slide-active {
+  opacity: 1;
 }
 
 .archive__caption {

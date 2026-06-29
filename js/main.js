@@ -361,6 +361,39 @@ document.addEventListener('DOMContentLoaded', () => {
     tickerStrip.innerHTML = items + items;
   }
 
+  // ── Hover slideshow ──
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.querySelectorAll('[data-images]').forEach(item => {
+      const container = item.querySelector('.feed__img, .work-grid__img, .archive__img');
+      if (!container) return;
+      const srcs = item.dataset.images.split(',');
+      const imgs = [];
+      srcs.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src.trim();
+        img.alt = '';
+        img.loading = 'lazy';
+        container.appendChild(img);
+        imgs.push(img);
+      });
+      let idx = 0;
+      let interval = null;
+      item.addEventListener('mouseenter', () => {
+        idx = 0;
+        if (imgs[idx]) imgs[idx].classList.add('slide-active');
+        interval = setInterval(() => {
+          imgs[idx].classList.remove('slide-active');
+          idx = (idx + 1) % imgs.length;
+          imgs[idx].classList.add('slide-active');
+        }, 900);
+      });
+      item.addEventListener('mouseleave', () => {
+        clearInterval(interval);
+        imgs.forEach(img => img.classList.remove('slide-active'));
+      });
+    });
+  }
+
   // ── Reveal with stagger ──
   const els = document.querySelectorAll('[data-reveal], [data-reveal-image], .line-grow');
   if ('IntersectionObserver' in window) {
