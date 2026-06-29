@@ -465,27 +465,36 @@ body { opacity: 0; }
    ═══════════════════════════════════════════════════════ */
 
 .feed {
-  padding: clamp(80px, 10vw, 160px) 0;
+  padding: clamp(80px, 10vw, 160px) var(--side);
 }
 
-.feed__row {
-  padding: 0 var(--side);
-  margin-bottom: clamp(64px, 8vw, 120px);
+.feed__header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: clamp(24px, 3vw, 40px);
 }
 
-.feed__row:last-child { margin-bottom: 0; }
+.feed__heading {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 
-.feed__row--full { }
+.feed__view-all {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
-.feed__row--pair {
+.feed__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(16px, 2vw, 24px);
-}
-
-.feed__row--offset {
-  padding-left: clamp(60px, 16vw, 320px);
-  padding-right: var(--side);
 }
 
 .feed__link {
@@ -494,23 +503,19 @@ body { opacity: 0; }
 
 .feed__img {
   overflow: hidden;
-  margin-bottom: 20px;
-  border-radius: 0;
+  margin-bottom: 14px;
 }
 
 .feed__img img {
   width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
   transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .feed__link:hover .feed__img img { transform: scale(1.03); }
 
-.feed__row--pair .feed__img img {
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-
-.feed__caption { padding: 0 2px; line-height: 1.15; }
+.feed__caption { line-height: 1.15; }
 
 .feed__name {
   display: block;
@@ -1429,7 +1434,6 @@ a.archive__item {
   .work-index__name { font-size: 16px; }
   .work-index__cat { font-size: 15px; }
 
-  .feed__row--offset { padding-left: clamp(60px, 14vw, 240px); }
 }
 
 @media (max-width: 1024px) {
@@ -1461,11 +1465,8 @@ a.archive__item {
   .intro__text { font-size: 24px; text-align: left; }
 
   /* Feed */
-  .feed { padding: 56px 0; }
-  .feed__row { margin-bottom: 48px; }
-  .feed__row--pair { grid-template-columns: 1fr; gap: 48px; }
-  .feed__row--offset { padding-left: var(--side); }
-  .feed__row--full .feed__caption { }
+  .feed { padding: 56px var(--side); }
+  .feed__grid { grid-template-columns: 1fr; gap: 40px; }
 
   .feed__name { font-size: 11px; }
   .feed__desc { font-size: 15px; }
