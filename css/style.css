@@ -1499,11 +1499,11 @@ a.archive__item {
    ═══════════════════════════════════════════════════════ */
 
 .footer {
-  padding: clamp(40px, 6vw, 80px) var(--side) var(--side);
+  padding: clamp(32px, 4vw, 56px) var(--side) var(--side);
 }
 
 .footer__top {
-  margin-bottom: clamp(24px, 4vw, 48px);
+  margin-bottom: clamp(12px, 2vw, 20px);
 }
 
 .footer__name {
@@ -1518,19 +1518,20 @@ a.archive__item {
 
 .footer__tagline {
   font-size: clamp(13px, 1.2vw, 15px);
-  font-style: italic;
   letter-spacing: var(--ls);
-  color: color-mix(in srgb, var(--fg) 40%, transparent);
+  text-align: center;
+  color: var(--fg);
   margin: 0;
 }
 
 .footer__year {
   display: block;
-  margin-top: clamp(32px, 5vw, 64px);
+  margin-top: clamp(16px, 2vw, 28px);
   font-size: 11px;
   letter-spacing: var(--ls);
+  text-align: center;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--fg) 25%, transparent);
+  color: var(--fg);
 }
 
 /* ═══════════════════════════════════════════════════════
