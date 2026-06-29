@@ -1399,6 +1399,25 @@ a.archive__item {
 /* Counter / number animation handled in JS */
 
 /* ═══════════════════════════════════════════════════════
+   RESPONSIVE — tablet archive detail (touch devices)
+   ═══════════════════════════════════════════════════════ */
+
+@media (pointer: coarse) and (max-width: 1400px) {
+  .archive-detail__grid {
+    grid-template-columns: 1fr;
+    padding: 0 var(--side);
+    column-gap: var(--side);
+    row-gap: var(--side);
+  }
+  .archive-detail__img:nth-child(even) {
+    margin-top: 0;
+  }
+  .archive-detail__img--full {
+    max-width: 100%;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════
    RESPONSIVE — 1024px (tablet), 768px (mobile)
    ═══════════════════════════════════════════════════════ */
 
