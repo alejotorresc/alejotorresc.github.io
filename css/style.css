@@ -247,14 +247,12 @@ body { opacity: 0; }
   display: none;
   position: fixed;
   inset: 0;
-  background: color-mix(in srgb, var(--bg) 75%, transparent);
-  backdrop-filter: blur(24px) saturate(1.2);
-  -webkit-backdrop-filter: blur(24px) saturate(1.2);
+  background: var(--bg);
   z-index: 105;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 var(--side);
+  justify-content: flex-end;
+  padding: var(--side);
+  padding-bottom: clamp(48px, 8vh, 80px);
 }
 
 .nav__overlay.open {
@@ -285,8 +283,8 @@ body { opacity: 0; }
 
 .nav__overlay-close {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   background: none;
   border: none;
   cursor: pointer;
@@ -316,19 +314,19 @@ body { opacity: 0; }
   list-style: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 56px;
+  gap: 0;
+  margin-bottom: clamp(40px, 6vh, 64px);
 }
 
 .nav__overlay-links a {
-  font-size: 18px;
+  font-size: clamp(32px, 7vw, 48px);
   font-weight: 400;
-  letter-spacing: var(--ls-tight);
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--fg);
   transition: opacity 0.3s ease-out;
-  padding: 8px 0;
+  padding: 6px 0;
+  line-height: 1.1;
 }
 
 .nav__overlay-links a.active { font-weight: 400; }
@@ -336,17 +334,12 @@ body { opacity: 0; }
 
 .nav__overlay-controls {
   display: flex;
-  gap: 32px;
-  position: absolute;
-  bottom: 48px;
-  left: 0;
-  right: 0;
-  justify-content: center;
+  gap: 24px;
 }
 
 .nav__overlay-controls button {
   font-family: var(--font);
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 400;
   letter-spacing: var(--ls);
   text-transform: uppercase;
