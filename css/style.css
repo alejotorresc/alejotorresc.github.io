@@ -497,12 +497,9 @@ body { opacity: 0; }
 }
 
 .feed__img {
+  position: relative;
   overflow: hidden;
   margin-bottom: 14px;
-}
-
-.feed__img {
-  position: relative;
 }
 
 .feed__img img {
@@ -724,12 +721,9 @@ body { opacity: 0; }
 .work-grid:hover .work-grid__item:hover { opacity: 1; }
 
 .work-grid__img {
+  position: relative;
   overflow: hidden;
   margin-bottom: 14px;
-}
-
-.work-grid__img {
-  position: relative;
 }
 
 .work-grid__img img {
@@ -1364,11 +1358,8 @@ a.thinking__item {
 }
 
 .archive__img {
-  overflow: hidden;
-}
-
-.archive__img {
   position: relative;
+  overflow: hidden;
 }
 
 .archive__img img {
