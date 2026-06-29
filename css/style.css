@@ -1146,28 +1146,20 @@ a.thinking__item {
   display: inline-block;
 }
 
-.essay__cover {
-  padding: 0 var(--side);
-}
-
-.essay__cover img {
-  width: 100%;
-  display: block;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-
 .essay__body {
-  max-width: 640px;
+  max-width: 680px;
   margin: 0 auto;
   padding: clamp(40px, 6vw, 80px) var(--side);
 }
 
 .essay__body p {
-  font-size: clamp(17px, 1.6vw, 20px);
-  line-height: 1.6;
+  font-size: clamp(18px, 1.8vw, 22px);
+  line-height: 1.7;
   letter-spacing: var(--ls-tight);
+  margin-bottom: 1.4em;
 }
+
+.essay__body p:last-child { margin-bottom: 0; }
 
 .essay__images {
   display: grid;
