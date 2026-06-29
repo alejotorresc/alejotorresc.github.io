@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://alejotorresc.github.io/img/hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/style.css?v=23">
+  <link rel="stylesheet" href="css/style.css?v=83">
 </head>
 <body>
 
@@ -63,33 +63,34 @@
       <img src="img/hero-10.jpg" alt="" class="hero__slide">
     </div>
     <div class="hero__caption" data-reveal>
-      <span class="hero__tag" data-en="Creative Director" data-es="Director Creativo">Creative Director</span>
-      <span class="hero__tag" data-en="Guatemala City" data-es="Ciudad de Guatemala">Guatemala City</span>
+      <span class="hero__tag" data-en="Creative Director — Guatemala City" data-es="Director Creativo — Ciudad de Guatemala">Creative Director — Guatemala City</span>
     </div>
   </section>
 
   <section class="intro" data-reveal>
-    <p class="intro__text" data-lang="en"><strong>Alejandro Torres</strong> is a Guatemala City–based creative director whose work spans <em>brand strategy, identity,</em> and <em>communication systems.</em> He brings a refined eye to emerging and established brands, building worlds through intention, restraint, and meaning.</p>
-    <p class="intro__text" data-lang="es" style="display:none"><strong>Alejandro Torres</strong> es un director creativo en Ciudad de Guatemala cuyo trabajo abarca <em>estrategia de marca, identidad,</em> y <em>sistemas de comunicación.</em> Aporta una mirada refinada a marcas emergentes y establecidas, construyendo mundos a través de intención, contención y significado.</p>
+    <p class="intro__text" data-lang="en"><a href="sobre.html" class="intro__link"><strong>Alejandro Torres</strong></a> is a Guatemala City–based creative director whose work spans <em>brand strategy, identity,</em> and <em>communication systems.</em> He brings a refined eye to emerging and established brands, building worlds through intention, restraint, and meaning.</p>
+    <p class="intro__text" data-lang="es" style="display:none"><a href="sobre.html" class="intro__link"><strong>Alejandro Torres</strong></a> es un director creativo en Ciudad de Guatemala cuyo trabajo abarca <em>estrategia de marca, identidad,</em> y <em>sistemas de comunicación.</em> Aporta una mirada refinada a marcas emergentes y establecidas, construyendo mundos a través de intención, contención y significado.</p>
   </section>
 
   <section class="feed">
 
-    <div class="feed__row" data-reveal>
-      <a href="trabajo/proyecto-01.html" class="feed__link">
-        <div class="feed__img">
-          <img src="img/project-01.jpg" alt="Aetnis">
-        </div>
-        <div class="feed__caption">
-          <span class="feed__name">Aetnis</span>
-          <span class="feed__desc" data-en="Brand Identity" data-es="Identidad de marca">Brand Identity</span>
-          <span class="feed__year">2025</span>
-        </div>
-      </a>
+    <div class="feed__header">
+      <span class="feed__heading" data-en="Selected Work" data-es="Trabajo Seleccionado">Selected Work</span>
+      <a href="trabajo.html" class="feed__view-all" data-en="View All" data-es="Ver Todo">View All</a>
     </div>
 
-    <div class="feed__row feed__row--pair" data-reveal>
-      <a href="trabajo/proyecto-02.html" class="feed__link">
+    <div class="feed__grid">
+      <a href="regentrace.html" class="feed__link" data-reveal data-images="img/project-detail-01.jpg,img/project-detail-02.jpg,img/project-detail-03.jpg">
+        <div class="feed__img">
+          <img src="img/project-01.jpg" alt="RegenTrace">
+        </div>
+        <div class="feed__caption">
+          <span class="feed__name">RegenTrace</span>
+          <span class="feed__desc" data-en="Creative Direction &amp; Strategy" data-es="Dirección Creativa &amp; Estrategia">Creative Direction &amp; Strategy</span>
+          <span class="feed__year">2024</span>
+        </div>
+      </a>
+      <a href="trabajo/proyecto-02.html" class="feed__link" data-reveal data-images="img/project-detail-02.jpg,img/project-detail-03.jpg,img/project-detail-04.jpg">
         <div class="feed__img">
           <img src="img/project-02.jpg" alt="Verso">
         </div>
@@ -99,7 +100,7 @@
           <span class="feed__year">2025</span>
         </div>
       </a>
-      <a href="trabajo/proyecto-03.html" class="feed__link">
+      <a href="trabajo/proyecto-03.html" class="feed__link" data-reveal data-images="img/project-detail-01.jpg,img/project-detail-02.jpg">
         <div class="feed__img">
           <img src="img/project-03.jpg" alt="Nómada">
         </div>
@@ -111,36 +112,81 @@
       </a>
     </div>
 
-    <div class="feed__row feed__row--offset" data-reveal>
-      <a href="trabajo/proyecto-04.html" class="feed__link">
-        <div class="feed__img">
-          <img src="img/project-04.jpg" alt="Latente">
-        </div>
-        <div class="feed__caption">
-          <span class="feed__name">Latente</span>
-          <span class="feed__desc" data-en="Creative Direction" data-es="Dirección creativa">Creative Direction</span>
-          <span class="feed__year">2024</span>
-        </div>
-      </a>
-    </div>
+  </section>
 
+  <section class="ticker">
+    <div class="ticker__header">
+      <span class="ticker__heading" data-en="From the Archive" data-es="Del Archivo">From the Archive</span>
+      <a href="archivo.html" class="ticker__view-all" data-en="View All" data-es="Ver Todo">View All</a>
+    </div>
+    <div class="ticker__track">
+      <div class="ticker__strip">
+        <a href="archivo/archivo-01.html" class="ticker__item">
+          <div class="ticker__img">
+            <img src="img/archive-01.jpg" alt="">
+            <div class="ticker__overlay">
+              <span class="ticker__name" data-en="Morning Light, Antigua" data-es="Luz de mañana, Antigua">Morning Light, Antigua</span>
+              <span class="ticker__year">2025</span>
+            </div>
+          </div>
+        </a>
+        <a href="archivo/archivo-02.html" class="ticker__item">
+          <div class="ticker__img">
+            <img src="img/archive-02.jpg" alt="">
+            <div class="ticker__overlay">
+              <span class="ticker__name" data-en="Study in Ochre" data-es="Estudio en ocre">Study in Ochre</span>
+              <span class="ticker__year">2024</span>
+            </div>
+          </div>
+        </a>
+        <a href="archivo/archivo-03.html" class="ticker__item">
+          <div class="ticker__img">
+            <img src="img/archive-03.jpg" alt="">
+            <div class="ticker__overlay">
+              <span class="ticker__name" data-en="What Remains" data-es="Lo que queda">What Remains</span>
+              <span class="ticker__year">2024</span>
+            </div>
+          </div>
+        </a>
+        <a href="archivo/archivo-04.html" class="ticker__item">
+          <div class="ticker__img">
+            <img src="img/archive-04.jpg" alt="">
+            <div class="ticker__overlay">
+              <span class="ticker__name">Mercado Central</span>
+              <span class="ticker__year">2024</span>
+            </div>
+          </div>
+        </a>
+        <a href="archivo/archivo-05.html" class="ticker__item">
+          <div class="ticker__img">
+            <img src="img/archive-05.jpg" alt="">
+            <div class="ticker__overlay">
+              <span class="ticker__name" data-en="Volcanic Landscape" data-es="Paisaje volcánico">Volcanic Landscape</span>
+              <span class="ticker__year">2023</span>
+            </div>
+          </div>
+        </a>
+        <a href="archivo/archivo-06.html" class="ticker__item">
+          <div class="ticker__img">
+            <img src="img/archive-06.jpg" alt="">
+            <div class="ticker__overlay">
+              <span class="ticker__name" data-en="Still Life with Shadow" data-es="Naturaleza muerta con sombra">Still Life with Shadow</span>
+              <span class="ticker__year">2023</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
   </section>
 
   <footer class="footer" data-reveal>
     <div class="footer__top">
       <p class="footer__name">Alejandro Torres</p>
-      <div class="footer__links">
-        <a href="mailto:hola@alejandrotorres.com">Email</a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
     </div>
-    <div class="footer__meta">
-      <span data-en="Copyright &copy; All rights reserved." data-es="Copyright &copy; Todos los derechos reservados.">Copyright &copy; All rights reserved.</span>
-      <span data-en="Creative Direction &amp; Brand Strategy" data-es="Dirección Creativa &amp; Estrategia de Marca">Creative Direction &amp; Brand Strategy</span>
-    </div>
+    <p class="footer__tagline" data-en="Creative Direction &amp; Brand Strategy" data-es="Dirección Creativa &amp; Estrategia de Marca">Creative Direction &amp; Brand Strategy</p>
+    <span class="footer__year">© 2026</span>
   </footer>
 
-  <script src="js/main.js?v=23"></script>
+  <script src="js/main.js?v=83"></script>
 </body>
 </html>
