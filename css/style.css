@@ -1529,7 +1529,8 @@ a.archive__item {
   /* Archive */
   .archive {
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    column-gap: var(--side);
+    row-gap: var(--side);
   }
 
   .archive__item:nth-child(even) {
