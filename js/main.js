@@ -304,11 +304,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lb.innerHTML = '<div class="lightbox__bg"></div>'
       + '<div class="lightbox__overlay"></div>'
+      + '<div class="lightbox__content">'
       + '<img class="lightbox__img" alt="">'
-      + '<button class="lightbox__close" aria-label="Close"></button>'
-      + '<button class="lightbox__arrow lightbox__arrow--prev">←</button>'
-      + '<button class="lightbox__arrow lightbox__arrow--next">→</button>'
-      + '<div class="lightbox__dots">' + dotsHtml + '</div>';
+      + '<div class="lightbox__controls">'
+      + '<button class="lightbox__arrow lightbox__arrow--prev">&larr;</button>'
+      + '<div class="lightbox__dots">' + dotsHtml + '</div>'
+      + '<button class="lightbox__arrow lightbox__arrow--next">&rarr;</button>'
+      + '</div>'
+      + '</div>'
+      + '<button class="lightbox__close" aria-label="Close"></button>';
     document.body.appendChild(lb);
 
     const lbImg = lb.querySelector('.lightbox__img');
