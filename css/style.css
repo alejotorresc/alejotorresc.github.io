@@ -478,14 +478,14 @@ body { opacity: 0; }
 .feed__heading {
   font-size: 18px;
   font-weight: 400;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--ls);
   text-transform: uppercase;
 }
 
 .feed__view-all {
   font-size: 18px;
   font-weight: 400;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--ls);
   text-transform: uppercase;
   text-decoration: underline;
   text-underline-offset: 4px;
