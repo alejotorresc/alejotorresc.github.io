@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://alejotorresc.github.io/img/hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="css/style.css?v=64">
+  <link rel="stylesheet" href="css/style.css?v=65">
 </head>
 <body>
 
@@ -20,7 +20,8 @@
     <ul class="nav__center">
       <li><a href="trabajo.html" data-en="Work" data-es="Trabajo">Work</a></li>
       <li><a href="pensamiento.html" class="active" data-en="Thinking" data-es="Pensamiento">Thinking</a></li>
-      <li><a href="sobre.html" data-en="About" data-es="Sobre mí">About</a></li>      <li><a href="archivo.html" data-en="Archive" data-es="Archivo">Archive</a></li>
+      <li><a href="sobre.html" data-en="About" data-es="Sobre mí">About</a></li>
+      <li><a href="archivo.html" data-en="Archive" data-es="Archivo">Archive</a></li>
       <li><a href="contacto.html" data-en="Contact" data-es="Contacto">Contact</a></li>
     </ul>
     <div class="nav__right">
@@ -35,12 +36,13 @@
   <div class="nav__overlay">
     <div class="nav__overlay-top">
       <a href="index.html" class="nav__overlay-logo">Alejandro Torres</a>
-          <button class="nav__overlay-close" aria-label="Close menu"></button>
+      <button class="nav__overlay-close" aria-label="Close menu"></button>
     </div>
     <ul class="nav__overlay-links">
       <li><a href="trabajo.html" data-en="Work" data-es="Trabajo">Work</a></li>
       <li><a href="pensamiento.html" class="active" data-en="Thinking" data-es="Pensamiento">Thinking</a></li>
-      <li><a href="sobre.html" data-en="About" data-es="Sobre mí">About</a></li>      <li><a href="archivo.html" data-en="Archive" data-es="Archivo">Archive</a></li>
+      <li><a href="sobre.html" data-en="About" data-es="Sobre mí">About</a></li>
+      <li><a href="archivo.html" data-en="Archive" data-es="Archivo">Archive</a></li>
       <li><a href="contacto.html" data-en="Contact" data-es="Contacto">Contact</a></li>
     </ul>
     <div class="nav__overlay-controls">
@@ -51,32 +53,49 @@
 
   <p class="section-label" data-en="Thinking" data-es="Pensamiento">Thinking</p>
 
-  <ul class="article-list">
-    <li data-reveal>
-      <a href="#">
-        <span class="article-list__title" data-en="What a brand says when it's not speaking" data-es="Lo que una marca dice cuando no está hablando">What a brand says when it's not speaking</span>
-        <span class="article-list__date">06.2026</span>
-      </a>
-    </li>
-    <li data-reveal>
-      <a href="#">
-        <span class="article-list__title" data-en="Strategy is not decoration with arguments" data-es="Estrategia no es decoración con argumentos">Strategy is not decoration with arguments</span>
-        <span class="article-list__date">05.2026</span>
-      </a>
-    </li>
-    <li data-reveal>
-      <a href="#">
-        <span class="article-list__title" data-en="The problem with designing without asking" data-es="El problema de diseñar sin preguntar">The problem with designing without asking</span>
-        <span class="article-list__date">04.2026</span>
-      </a>
-    </li>
-    <li data-reveal>
-      <a href="#">
-        <span class="article-list__title" data-en="Building a universe, not an image" data-es="Construir un universo, no una imagen">Building a universe, not an image</span>
-        <span class="article-list__date">03.2026</span>
-      </a>
-    </li>
-  </ul>
+  <div class="thinking">
+
+    <a href="pensamiento/pensamiento-01.html" class="thinking__item" data-reveal>
+      <div class="thinking__img">
+        <img src="img/hero-03.jpg" alt="" loading="lazy">
+      </div>
+      <div class="thinking__meta">
+        <span class="thinking__title" data-en="What a brand says when it's not speaking" data-es="Lo que una marca dice cuando no está hablando">What a brand says when it's not speaking</span>
+        <span class="thinking__date">06.2026</span>
+      </div>
+    </a>
+
+    <a href="pensamiento/pensamiento-02.html" class="thinking__item" data-reveal>
+      <div class="thinking__img">
+        <img src="img/hero-06.jpg" alt="" loading="lazy">
+      </div>
+      <div class="thinking__meta">
+        <span class="thinking__title" data-en="Strategy is not decoration with arguments" data-es="Estrategia no es decoración con argumentos">Strategy is not decoration with arguments</span>
+        <span class="thinking__date">05.2026</span>
+      </div>
+    </a>
+
+    <a href="pensamiento/pensamiento-03.html" class="thinking__item" data-reveal>
+      <div class="thinking__img">
+        <img src="img/hero-09.jpg" alt="" loading="lazy">
+      </div>
+      <div class="thinking__meta">
+        <span class="thinking__title" data-en="The problem with designing without asking" data-es="El problema de diseñar sin preguntar">The problem with designing without asking</span>
+        <span class="thinking__date">04.2026</span>
+      </div>
+    </a>
+
+    <a href="pensamiento/pensamiento-04.html" class="thinking__item" data-reveal>
+      <div class="thinking__img">
+        <img src="img/hero-01.jpg" alt="" loading="lazy">
+      </div>
+      <div class="thinking__meta">
+        <span class="thinking__title" data-en="Building a universe, not an image" data-es="Construir un universo, no una imagen">Building a universe, not an image</span>
+        <span class="thinking__date">03.2026</span>
+      </div>
+    </a>
+
+  </div>
 
   <footer class="footer" data-reveal>
     <div class="footer__top">
@@ -88,6 +107,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=64"></script>
+  <script src="js/main.js?v=65"></script>
 </body>
 </html>
