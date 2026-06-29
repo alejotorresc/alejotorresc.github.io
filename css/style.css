@@ -1101,21 +1101,22 @@ a.thinking__item {
 
 .thinking__preview {
   position: fixed;
-  width: 300px;
-  height: 400px;
+  right: var(--side);
+  top: 50%;
+  transform: translateY(-50%) scale(0.96);
+  width: clamp(240px, 22vw, 360px);
+  aspect-ratio: 3 / 4;
   pointer-events: none;
   z-index: 50;
   overflow: hidden;
   opacity: 0;
-  transform: scale(0.92);
-  transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1),
-              transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  will-change: transform;
+  transition: opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .thinking__preview.visible {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(-50%) scale(1);
 }
 
 .thinking__preview img {

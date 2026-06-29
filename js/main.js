@@ -250,37 +250,16 @@ document.addEventListener('DOMContentLoaded', () => {
     tp.appendChild(tpImg);
     document.body.appendChild(tp);
 
-    let tpTX = 0, tpTY = 0, tpCX = 0, tpCY = 0, tpRaf = null;
-
-    function tpAnimate() {
-      tpCX += (tpTX - tpCX) * 0.1;
-      tpCY += (tpTY - tpCY) * 0.1;
-      tp.style.left = tpCX + 'px';
-      tp.style.top = tpCY + 'px';
-      tpRaf = requestAnimationFrame(tpAnimate);
-    }
-
-    thinking.addEventListener('mousemove', e => {
-      tpTX = e.clientX + 24;
-      tpTY = e.clientY - 140;
-    });
-
     thinking.querySelectorAll('.thinking__item').forEach(item => {
       item.addEventListener('mouseenter', () => {
         const src = item.dataset.img;
         if (src) {
           tpImg.src = src;
           tp.classList.add('visible');
-          if (!tpRaf) {
-            tpCX = tpTX;
-            tpCY = tpTY;
-            tpRaf = requestAnimationFrame(tpAnimate);
-          }
         }
       });
       item.addEventListener('mouseleave', () => {
         tp.classList.remove('visible');
-        if (tpRaf) { cancelAnimationFrame(tpRaf); tpRaf = null; }
       });
     });
   }
