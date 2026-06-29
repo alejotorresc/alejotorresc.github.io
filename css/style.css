@@ -1221,11 +1221,11 @@ a.archive__item {
 }
 
 .archive-detail__grid {
-  padding: 0 var(--side);
+  padding: 0 clamp(16px, 4vw, 64px);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: var(--side);
-  row-gap: var(--side);
+  column-gap: clamp(16px, 4vw, 64px);
+  row-gap: clamp(16px, 6vw, 96px);
   align-items: start;
   margin-bottom: clamp(80px, 10vw, 160px);
 }
@@ -1548,6 +1548,9 @@ a.archive__item {
   /* Archive Detail */
   .archive-detail__grid {
     grid-template-columns: 1fr;
+    padding: 0 var(--side);
+    column-gap: var(--side);
+    row-gap: var(--side);
   }
   .archive-detail__img:nth-child(even) {
     margin-top: 0;
