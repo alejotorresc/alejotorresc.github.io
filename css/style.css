@@ -252,7 +252,7 @@ body { opacity: 0; }
   flex-direction: column;
   justify-content: flex-end;
   padding: var(--side);
-  padding-bottom: clamp(48px, 8vh, 80px);
+  padding-bottom: var(--side);
 }
 
 .nav__overlay.open {
@@ -333,6 +333,9 @@ body { opacity: 0; }
 .nav__overlay-links a:hover { opacity: 0.6; }
 
 .nav__overlay-controls {
+  position: absolute;
+  bottom: var(--side);
+  left: var(--side);
   display: flex;
   gap: 24px;
 }
