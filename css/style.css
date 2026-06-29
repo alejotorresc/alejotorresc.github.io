@@ -1413,7 +1413,7 @@ a.archive__item {
   .feed__row--offset { padding-left: clamp(60px, 14vw, 240px); }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   :root { --side: 16px; }
 
   .nav__center,
